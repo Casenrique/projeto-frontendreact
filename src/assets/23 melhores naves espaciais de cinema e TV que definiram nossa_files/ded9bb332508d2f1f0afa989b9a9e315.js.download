@@ -1,0 +1,2606 @@
+
+    var MD5 = function(d){var r = M(V(Y(X(d),8*d.length)));return r.toLowerCase()};function M(d){for(var _,m="0123456789ABCDEF",f="",r=0;r<d.length;r++)_=d.charCodeAt(r),f+=m.charAt(_>>>4&15)+m.charAt(15&_);return f}function X(d){for(var _=Array(d.length>>2),m=0;m<_.length;m++)_[m]=0;for(m=0;m<8*d.length;m+=8)_[m>>5]|=(255&d.charCodeAt(m/8))<<m%32;return _}function V(d){for(var _="",m=0;m<32*d.length;m+=8)_+=String.fromCharCode(d[m>>5]>>>m%32&255);return _}function Y(d,_){d[_>>5]|=128<<_%32,d[14+(_+64>>>9<<4)]=_;for(var m=1732584193,f=-271733879,r=-1732584194,i=271733878,n=0;n<d.length;n+=16){var h=m,t=f,g=r,e=i;f=md5_ii(f=md5_ii(f=md5_ii(f=md5_ii(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_ff(f=md5_ff(f=md5_ff(f=md5_ff(f,r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+0],7,-680876936),f,r,d[n+1],12,-389564586),m,f,d[n+2],17,606105819),i,m,d[n+3],22,-1044525330),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+4],7,-176418897),f,r,d[n+5],12,1200080426),m,f,d[n+6],17,-1473231341),i,m,d[n+7],22,-45705983),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+8],7,1770035416),f,r,d[n+9],12,-1958414417),m,f,d[n+10],17,-42063),i,m,d[n+11],22,-1990404162),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+12],7,1804603682),f,r,d[n+13],12,-40341101),m,f,d[n+14],17,-1502002290),i,m,d[n+15],22,1236535329),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+1],5,-165796510),f,r,d[n+6],9,-1069501632),m,f,d[n+11],14,643717713),i,m,d[n+0],20,-373897302),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+5],5,-701558691),f,r,d[n+10],9,38016083),m,f,d[n+15],14,-660478335),i,m,d[n+4],20,-405537848),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+9],5,568446438),f,r,d[n+14],9,-1019803690),m,f,d[n+3],14,-187363961),i,m,d[n+8],20,1163531501),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+13],5,-1444681467),f,r,d[n+2],9,-51403784),m,f,d[n+7],14,1735328473),i,m,d[n+12],20,-1926607734),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+5],4,-378558),f,r,d[n+8],11,-2022574463),m,f,d[n+11],16,1839030562),i,m,d[n+14],23,-35309556),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+1],4,-1530992060),f,r,d[n+4],11,1272893353),m,f,d[n+7],16,-155497632),i,m,d[n+10],23,-1094730640),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+13],4,681279174),f,r,d[n+0],11,-358537222),m,f,d[n+3],16,-722521979),i,m,d[n+6],23,76029189),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+9],4,-640364487),f,r,d[n+12],11,-421815835),m,f,d[n+15],16,530742520),i,m,d[n+2],23,-995338651),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+0],6,-198630844),f,r,d[n+7],10,1126891415),m,f,d[n+14],15,-1416354905),i,m,d[n+5],21,-57434055),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+12],6,1700485571),f,r,d[n+3],10,-1894986606),m,f,d[n+10],15,-1051523),i,m,d[n+1],21,-2054922799),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+8],6,1873313359),f,r,d[n+15],10,-30611744),m,f,d[n+6],15,-1560198380),i,m,d[n+13],21,1309151649),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+4],6,-145523070),f,r,d[n+11],10,-1120210379),m,f,d[n+2],15,718787259),i,m,d[n+9],21,-343485551),m=safe_add(m,h),f=safe_add(f,t),r=safe_add(r,g),i=safe_add(i,e)}return Array(m,f,r,i)}function md5_cmn(d,_,m,f,r,i){return safe_add(bit_rol(safe_add(safe_add(_,d),safe_add(f,i)),r),m)}function md5_ff(d,_,m,f,r,i,n){return md5_cmn(_&m|~_&f,d,_,r,i,n)}function md5_gg(d,_,m,f,r,i,n){return md5_cmn(_&f|m&~f,d,_,r,i,n)}function md5_hh(d,_,m,f,r,i,n){return md5_cmn(_^m^f,d,_,r,i,n)}function md5_ii(d,_,m,f,r,i,n){return md5_cmn(m^(_|~f),d,_,r,i,n)}function safe_add(d,_){var m=(65535&d)+(65535&_);return(d>>16)+(_>>16)+(m>>16)<<16|65535&m}function bit_rol(d,_){return d<<_|d>>>32-_}
+    var urlScriptPar = (new URL(document.currentScript.src)).searchParams;
+    var forceCountryCode = urlScriptPar.get('forceCountryCode');
+    var include_squirrel_domain = urlScriptPar.get('include_squirrel_domain');
+
+    var included_scripts = included_scripts || 0;
+    included_scripts++;
+    (function(){
+
+        var preview = false;
+        if(window.location.href.indexOf("/settings/show/")>0
+            || window.location.href.indexOf("/squirrels/show/")>0
+            || window.location.href.indexOf("/squirrels/style")>0
+            || window.location.href.indexOf("/playlists/show-playlist")>0
+            || window.location.href.indexOf("/playlists/new-playlist")>0
+            || (window.location.href.indexOf("/test-squirrel-uat")>0 && window.location.search.indexOf('nopreview')<0)
+        ){
+            preview = true;
+        }
+
+        consoleLog("Included scripts " + included_scripts);
+        if(forceCountryCode==null && included_scripts > 1){
+            return;
+        }
+        const myObserver = new ResizeObserver(entries => {
+            adaptcCssToSquirrelWidth(entries);
+        });
+        var position = 1;
+        var editorialStandards = "https://www.pocket-lint.com/info/editorial-standards#squirrel";//"https://www.bestsquirreldeals.com/terms-of-use";
+        var show_adverts_val = "0";
+        var disclaimer_standard = "1";
+        var disclaimer_big = "";
+        var disclaimer_small = "";
+        var amazon_insights = "1";
+        var client_id = "3"
+        var scripts_folder= "scripts";
+        var disclaimer_text = 'We check 1,000s of prices on 1,000s of retailers to get you the lowest new price we can find. ' + 'Pocket-lint' +' may get a commission from these offers. Read more <a target=\"_blank\" href=\"' + editorialStandards +'\"> here</a>.';
+                var show_external_val = "0";
+                     show_external_val = "1";
+                var is_playlist = false;
+        var is_tbc_playlist = false;
+        var squirrel_data_position = [];
+        var make_model_playlist_id_position = [];
+
+        var default_playlist = 0;
+        
+                //create empty apntag object if it doesn't exist
+        var apntag = apntag || {};
+//create a queue on the apntag object
+        apntag.anq = apntag.anq || [];
+
+        var d = document, e = d.createElement('script'), p = d.getElementsByTagName('head')[0];
+        e.type = 'text/javascript';  e.async = true;
+        e.src = '//acdn.adnxs.com/ast/ast.js';
+        p.insertBefore(e, p.firstChild);
+
+        
+        var urlParams = new URLSearchParams(window.location.search);
+        //var countrySqr = 'gb';
+        //var countrySqr = urlParams.get('country');
+//urlParams.get('country');
+        var v = urlParams.get('v');
+        if(preview && typeof custom_preview_style !=='undefined'){
+            var custom_style = custom_preview_style;
+        } else {
+            var custom_style = JSON.parse('{"id":"-1","content_color":"#fbfbfb","font_family":"Arial, Helvetica, sans-serif","font_family_disclaimer":"Helvetica, sans-serif","disclaimer_font_color":"#000000","disclaimer_font_size":"9px","content_font_color":"#000000","view_offer_link_font_color":"#ffffff","retailer_name_font_color":"#000000","header_color":"#1e1e31","header_font_color":"#ffffff","retailer_name":"0","retailer_name_only":"0","view_offer_color":"#5aaf0b","view_offer_font_color":"#ffffff","view_offer_link_color":"#5aaf0b","tds_selected_button":"#5bc0de","font_size":"0","default_font_size":"19px","font_header":"18px","font_rrp":"15px","font_contract_product":"13px","font_contract_offers":"12px","font_contract_pricing":"9px","font_contract_pricing_1":"10px","font_price":"19px","font_price_rrp":"17px","font_stock":"10px","font_button":"14px","font_retailer":"15px","show_rrp":"1","rrp_font_color":"grey","show_header":"1","show_logo":"1","show_price":"1","price_font_color":"#000000"}');
+        }
+        consoleLog(custom_style);
+
+
+        var squirrel_button = window.location.search.match(/button=(\w)/);
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+        var timestamp = new Date().getTime();
+
+        var randNumb = Math.floor(Math.random() * 10000);
+        var getSrcOrigin =  new URL(document.currentScript.src).origin;
+        if(preview){
+            getSrcOrigin = "https://squirrels-gen.getsquirrel.co";
+        }else{
+            getSrcOrigin = getSrcOrigin.replace("squirrels.getsquirrel.co","squirrels-gen.getsquirrel.co");
+        }
+
+        var make_model_page = urlParams.get('make_model');
+        const forbidden_countries = [];
+
+        var domain = window.location.origin;
+
+        if(include_squirrel_domain!== null && include_squirrel_domain.length){
+            domain = include_squirrel_domain;
+        }
+
+        if(!preview && !checkDomainValid(domain)){
+            return;
+        }
+
+        if(typeof document.currentScript !== "undefined")
+        {
+            urlParams = new URLSearchParams(document.currentScript.src);
+        }
+
+        var first_launch = true;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if(first_launch){
+                first_launch = false;
+                console.log("Squirrel script version 11.02");
+                document.querySelectorAll('.squirrel_widget').forEach(function(widget_class) {
+                    widget_class.className = 'squirrel_div';
+                });
+                include_script(getSrcOrigin + "/"+scripts_folder+"/config_country_squirrel.js",show_country);
+            }
+        });
+
+        setTimeout(function () {
+            var DOMContentLoaded_event = document.createEvent("Event")
+            DOMContentLoaded_event.initEvent("DOMContentLoaded", true, true)
+            window.document.dispatchEvent(DOMContentLoaded_event)
+        }, 1500);
+
+        function show_country(){
+            getUserCountry(countrySqr);
+            consoleLog("Updated country: " + countrySqr);
+
+            get_squirrel();
+
+            var nocache = "";
+            if(!preview){
+                add_squirrel_from_tags();
+            }
+
+        }
+
+
+
+        //var client_domain = squirrel_container.dataset.clientdomain;
+
+        /*if(client_domain && client_domain !== "undefined")
+                        {
+                            domain = client_domain;
+                        }
+                        else
+                        {
+                            data.append("domain", domain);
+                        }*/
+        function get_squirrel(){
+            // inject by div injection
+            //var squirrel_container = document.querySelectorAll('.squirrel_div');
+            //document.currentScript.closest('.squirrel_div');
+            consoleLog("get squirrel");
+            document.querySelectorAll('.squirrel_div').forEach(function(squirrel_container){
+                //document.querySelectorAll('.squirrel_div').forEach(function(squirrel_container){
+                consoleLog("found squirrel div");
+                if (squirrel_container.dataset.loaded == "false") {
+                    consoleLog("loaded false");
+                    var id = squirrel_container.dataset.squirrelId;
+                    var make = squirrel_container.dataset.make;
+                    var model = squirrel_container.dataset.model;
+                    var is_button = squirrel_container.dataset.button;
+
+                    var playlist_id = squirrel_container.dataset.squirrelPlaylistId;
+                    var playlist_intelligent_mode = squirrel_container.dataset.squirrelPlaylistIntelligentMode;
+
+
+                    if (!id && (!make || !model) && !playlist_id && !playlist_intelligent_mode){
+                        consoleLog("no info");
+                        return;
+                    }
+
+                    if(playlist_id || playlist_intelligent_mode){
+                        is_playlist = true;
+                    }
+
+                    if(is_playlist){
+                        //ADD PLAYLIST CODE
+                        consoleLog("IS Playlist");
+                        if(playlist_intelligent_mode) {
+                            var md5_code = MD5(window.location.origin + window.location.pathname + client_id);
+
+                            var playlist_intelligent_refs = checkPlaylistIntelligent(playlist_intelligent_mode);
+                            consoleLog(playlist_intelligent_refs);
+                            var asins_md5 = MD5(playlist_intelligent_refs.join(",").toString());
+
+                            call_playlist_file(md5_code, position, squirrel_container, asins_md5, "mode="+playlist_intelligent_mode+"&asins_md5="+asins_md5+"&values=" + encodeURIComponent(playlist_intelligent_refs) + "&referrer_uri=" + encodeURIComponent(window.location.href) + "&client_id=" + client_id);
+
+
+                        } else {
+                            call_playlist_file(playlist_id, position, squirrel_container, "", "");
+                        }
+                    }else{
+                        if (!id) {
+
+                            var extra_args_make_model = "&make=" + encodeURIComponent(make) + "&model=" + encodeURIComponent(model) +"&referrer_uri="+encodeURIComponent(window.location.href)+"&client_id="+client_id
+                            var make_model_md5 = MD5(extra_args_make_model);
+                            include_script(getSrcOrigin + "/" + client_id +"/make_model_requests/"+make_model_md5+".js?md5_make_model="+make_model_md5+extra_args_make_model,
+                                got_make_model, position,squirrel_container);
+                        } else {
+                            call_squirrel_file(id, position,squirrel_container,is_button);
+                        }
+                    }
+                }
+                position++;
+
+            });
+        }
+
+
+        function checkPlaylistIntelligent(mode){
+            var valid_asins = [];
+            if(mode.toUpperCase()=='ALL'){
+                var titles = document.querySelectorAll("a");
+                titles.forEach(function(nodeTitle){
+                    var asin = ExtractASIN(nodeTitle.href);
+
+                    if(asin && isAsin(asin)){
+                        valid_asins.push(asin);
+                    }
+                    /*if(nodeTitle.nodeName === "H1")
+                    {
+                        getTextNodesIn(nodeTitle).forEach(function(nodeText){
+                            returnH1 = nodeText.nodeValue;
+                        });
+                    }*/
+                });
+
+                return valid_asins;
+
+            } else {
+                return false;
+            }
+        }
+
+        function ExtractASIN(url){
+            var ASINreg = new RegExp(/(?:\/)([A-Z0-9]{10})(?:$|\/|\?)/);
+            var  cMatch = url.match(ASINreg);
+            if(cMatch == null){
+                return null;
+            }
+            return cMatch[1];
+        }
+
+        function isAsin($string){
+            var ptn = new RegExp(/^(B[\dA-Z]{9}|\d{9}(X|\d))$/);
+            if ($string.match(ptn)) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function got_playlist_intelligent(pos, squirrel_container, asins_md5) {
+            consoleLog("GOT PLAYLIST INTELLIGENT");
+            if (typeof make_model_playlist_id !== "undefined" && make_model_playlist_id != 0) {
+                call_playlist_file(make_model_playlist_id, pos, playlist_container, asins_md5)
+            }else{
+                default_behaviour(pos, playlist_container);
+            }
+        }
+
+        function default_behaviour(pos, squirrel_container){
+            if(default_playlist != 0 && !preview){
+                consoleLog("Loading Default playlist: ", default_playlist);
+                include_script(getSrcOrigin + "/" + client_id + "/" + countrySqr + "/playlists/" + default_playlist + ".js",
+                    renderHTMLPlaylist, default_playlist, pos, squirrel_container, null);
+            }
+        }
+
+        function got_make_model(pos,squirrel_container){
+            consoleLog("GOT MAKE MODEL");
+            make_model_playlist_id_position[pos] = 0;
+            if(typeof make_model_squirrel_id !== "undefined" && make_model_squirrel_id != 0){
+                call_squirrel_file(make_model_squirrel_id, pos,squirrel_container);
+            }else{
+                if (typeof make_model_playlist_id !== "undefined" && make_model_playlist_id != 0) {
+                    make_model_playlist_id_position[pos] = make_model_playlist_id;
+                    call_playlist_file(make_model_playlist_id, pos, squirrel_container);
+                }else{
+                    default_behaviour(pos, squirrel_container);
+                }
+            }
+        }
+
+        function add_squirrel_from_tags(){
+
+
+            function getTextNodesIn(elem, opt_fnFilter) {
+                var textNodes = [];
+                if (elem) {
+                    for (var nodes = elem.childNodes, i = nodes.length; i--;) {
+                        var node = nodes[i], nodeType = node.nodeType;
+                        if (nodeType == 3) {
+                            if (!opt_fnFilter || opt_fnFilter(node, elem)) {
+                                textNodes.push(node);
+                            }
+                        }
+                        else if (nodeType == 1 || nodeType == 9 || nodeType == 11) {
+                            textNodes = textNodes.concat(getTextNodesIn(node, opt_fnFilter));
+                        }
+                    }
+                }
+                return textNodes;
+            }
+
+            getTextNodesIn(document.body).forEach(function(node){
+                if(node.nodeValue && node.nodeValue.match(/SQUIRREl_(widget_)?(\d+)/gi)){
+
+                                        if(node.nodeValue.indexOf('apntag') !== -1)
+                        return;
+                            
+
+                    var parent = node.parentNode;
+
+                    node.nodeValue.match(/SQUIRREl_(widget_)?(\d+)/gi).forEach(function(squirrel){
+                        var id;
+                        (squirrel.split('_')[2] ? id = squirrel.split('_')[2] : id = squirrel.split('_')[1]);
+
+
+                        var squirrelDiv = document.createElement('div');
+                        squirrelDiv.classList.add('squirrel_div');
+                        squirrelDiv.dataset.squirrelId = id;
+                        squirrelDiv.dataset.loaded = 'true';
+                        squirrelDiv.dataset.position = position;
+
+                        call_squirrel_file(id, position,squirrelDiv);
+
+                        parent.appendChild(squirrelDiv);
+                        node.nodeValue = node.nodeValue.replace(squirrel, "");
+                        /* var divContainer = generateIframElement(position, id, disclaimer_standard, disclaimer_big, disclaimer_small, editorialStandards);
+
+                         squirrelDiv.appendChild(divContainer);
+
+                         verifySquirrelWidth(id);
+
+                         */
+                        position++;
+                    });
+                }
+
+                if(node.nodeValue && node.nodeValue.match(/SQUIRREl_BUTTON_?(\d+)/gi)) {
+                                        if (node.nodeValue.indexOf('apntag') !== -1)
+                        return;
+                            
+
+                    var parent = node.parentNode;
+
+                    node.nodeValue.match(/SQUIRREl_BUTTON_?(\d+)/gi).forEach(function (squirrel) {
+                        var id;
+                        (squirrel.split('_')[2] ? id = squirrel.split('_')[2] : id = squirrel.split('_')[1]);
+
+                        var squirrelDiv = document.createElement('div');
+                        squirrelDiv.classList.add('squirrel_div');
+                        squirrelDiv.dataset.squirrelId = id;
+                        squirrelDiv.dataset.loaded = 'true';
+                        squirrelDiv.dataset.position = position;
+
+                        call_squirrel_file(id, position,squirrelDiv, 1);
+
+                        parent.appendChild(squirrelDiv);
+                        node.nodeValue = node.nodeValue.replace(squirrel, "");
+
+                        position++;
+                    });
+                }
+            });
+
+        }
+
+
+        function renderHTML(id, pos, squirrel_container, is_button) {
+           /* if(preview && typeof squirrel_preview_data !=='undefined' && squirrel_preview_data !==''){
+                console.log('AAAAAAA'+squirrel_preview_data);
+                squirrel_data = squirrel_preview_data;
+            }*/
+            // GET SQUIRRELS DATA
+            if(typeof squirrel_data === "undefined" || !squirrel_data.length){
+                default_behaviour(pos, squirrel_container);
+                return;
+            }else{
+                squirrel_data_position[pos] = squirrel_data;
+            }
+
+            consoleLog("Squirrel data" ,squirrel_data_position[pos]);
+
+
+            if(!squirrel_data_position[pos].squirrel_id){
+                squirrel_data_position[pos] = squirrel_data_position[pos][0];
+            }
+            consoleLog("Squirrel data" ,squirrel_data_position[pos]);
+
+            is_tbc_playlist = squirrel_data_position[pos].is_tbc_playlist;
+
+            var squirrel_width = squirrel_container.offsetWidth;
+
+            if(is_button == "1" ){
+                is_tbc_playlist = false;
+            }
+
+            if(is_tbc_playlist && ( squirrel_width > 300 || squirrel_width == 0)){
+                renderHTMLPlaylist(id, pos, squirrel_container, null);
+                return;
+            }
+
+            offersIdsList = [];
+            const obj= {
+                squirrel_id: squirrel_data_position[pos]["squirrel_id"],
+                offers_list: []
+            }
+
+
+            //offersIdsList.push(obj);
+
+            var html  =           getHTML(squirrel_data_position[pos],id, pos,is_button);
+            var divContainer      = document.createElement('div');
+
+            divContainer.innerHTML = html;
+
+            squirrel_container.appendChild(divContainer);
+            squirrel_container.dataset.loaded = "true";
+            squirrel_container.dataset.position = pos;
+            squirrel_container.dataset.squirrelId = id;
+
+            let a_href = '<a style="font-family: '+custom_style["font_family"]+' !important; color: '+custom_style["disclaimer_font_color"]+' !important; text-decoration: none !important;text-decoration-color: unset !important; \\n\' +\n' +
+                'text-decoration-thickness: unset !important; text-underline-offset: unset !important;"';
+                if(is_button != "1"){
+                    disclaimer_text = disclaimer_text.replace("<a", a_href);
+                    document.getElementById("disclaimer_text_" + pos).innerHTML = disclaimer_text;
+                }
+
+
+            var playlist_md5 = "";
+            //document.querySelector('#squirrel-inline-playlist-id_'+pos).getAttribute('data-playlist-md5');
+
+            sendReport(offersIdsList, id,null,false,false, null, null, playlist_md5);
+
+
+
+            if(document.querySelectorAll('#squirrel-contract') !==  null) {
+                document.querySelectorAll('#squirrel-contract').forEach(function (elem, index) {
+                    elem.addEventListener('click', function () {
+                        elem.classList.add("selected");
+                        elem.parentNode.querySelector("#squirrel-sim-free").classList.remove("selected");
+                        elem.parentNode.querySelector("#squirrel-contract").style.color = "#5bc0de !important";
+                        elem.parentNode.querySelector("#squirrel-sim-free").style.color = "#000000 !important";
+
+                        elem.parentNode.parentNode.querySelector('.contract-offers').style.display = "block";
+                        elem.parentNode.parentNode.querySelector('.squirrel-part').style.display = "none";
+                        elem.parentNode.parentNode.querySelector('.squirrel-inline-div').classList.add("contract-offers-background");
+                    });
+                });
+            }
+            if(document.querySelector('#squirrel-sim-free') !== null) {
+                document.querySelectorAll('#squirrel-sim-free').forEach(function (elem, index) {
+                    elem.addEventListener('click', function(){
+                        elem.classList.add("selected");
+                        elem.parentNode.querySelector("#squirrel-contract").classList.remove("selected");
+                        elem.parentNode.querySelector("#squirrel-contract").style.color = "#000000 !important";
+                        elem.parentNode.querySelector("#squirrel-sim-free").style.color = "#5bc0de !important";
+
+                        elem.parentNode.parentNode.querySelector('.contract-offers').style.display = "none";
+                        //elem.parentNode.parentNode.querySelector('.squirrel-part').style.display = screen.width > 600 ? "inline-flex" : "block";
+                        elem.parentNode.parentNode.querySelector('.squirrel-part').style.display = "inline-flex" ;
+                        elem.parentNode.parentNode.querySelector('.squirrel-part').style.width = "100%";
+                        elem.parentNode.parentNode.querySelector('.squirrel-inline-div').classList.remove("contract-offers-background");
+                    });
+                });
+
+            }
+
+            apply_custom_style(pos);
+            
+            if (show_external_val == 1) {
+                apply_ext_div("squirrel",pos, id);
+            }
+                    
+
+            if(typeof squirrelPreviewReactivateButtons !== "undefined"){
+                squirrelPreviewReactivateButtons();
+            }
+        }
+                function apply_ext_div(type, pos, id){
+
+            f = document.createElement('script');
+            //p = d.getElementsByTagName('head')[0];
+
+            f.async = true;
+            f.src = "//cdn.browsiprod.com/master/addrev.js";
+
+            var ext_div = document.getElementById(type+'_' + id +'_'+pos);
+            if(ext_div){
+                ext_div.insertBefore(f, ext_div.firstChild);
+                pushExt(pos, id);
+            }
+
+
+
+
+
+        }
+
+        function pushExt(pos, id){
+            consoleLog('ADVERT-PUSH-EXT-'+pos + "-" + id);
+            //push commands to loading queue, to allow for async loading
+            apntag.anq.push(function() {
+                //set global page options
+                apntag.setPageOpts({
+                    member: 3491,
+                    keywords: {
+                        'squirrel_publisher': "Pocket-lint.com",
+                        'squirrel_location': pos
+                    }
+                });
+
+                //define ad tags
+                apntag.defineTag({
+                    tagId: 15843435,
+                    sizes: [320,50],
+                    targetId: 'squirrel_' + id +'_'+pos
+                });
+
+                //start loading tags
+                apntag.loadTags();
+            });
+        }
+        
+        function changeColor(element, color) {
+            element.style.setProperty("background-color", color, 'important');
+        }
+
+        function apply_custom_style(pos)
+        {
+
+            var sqr_div = document.querySelector("#squirrel-inline-div-id-"+pos)
+            if(sqr_div){
+
+
+
+                sqr_div.querySelectorAll('.contract-view-offer').forEach(function(offer){
+                    offer.querySelectorAll('button').forEach(function(offer_button){
+                        offer_button.addEventListener("click", function(event) {
+                            //var button = offer.querySelector('a.check_price_btn.check_price_link');
+                            let button = offer_button.closest('a');
+                            assign_click_behaviour(button, false, offer,squirrel_data_position[pos]["squirrel_id"]);
+                        });
+                    });
+                });
+
+                sqr_div.querySelectorAll('.squirrel-inline-div-id .retailer').forEach(function(offer){
+                    offer.querySelectorAll('button').forEach(function(offer_button){
+                        offer_button.addEventListener("click", function(event) {
+                            //var button = offer.querySelector('a.check_price_btn.check_price_link');
+                            let button = offer_button.closest('a');
+                            assign_click_behaviour(button, false, offer,squirrel_data_position[pos]["squirrel_id"]);
+
+                        });
+                    });
+                    if(offer.querySelector('.logo-clickable')) {
+                        offer.querySelector('.logo-clickable').addEventListener("click", function (event) {
+                            let logo = offer.querySelector('.logo-clickable');
+                            assign_click_behaviour(logo, true, offer,squirrel_data_position[pos]["squirrel_id"]);
+                        });
+                    }
+                });
+
+                sqr_div.querySelectorAll('.button_only').forEach(function(offer){
+                    offer.querySelectorAll('button').forEach(function(offer_button){
+                        offer_button.addEventListener("click", function(event) {
+                            //var button = offer.querySelector('a.check_price_btn.check_price_link');
+                            let button = offer_button.closest('a');
+                            assign_click_behaviour(button, false, offer,squirrel_data_position[pos]["squirrel_id"]);
+                        });
+                    });
+                });
+
+
+                myObserver.observe(sqr_div);
+
+                var logos_elms = sqr_div.querySelectorAll('.logo-clickable');
+                for(var i = 0; i < logos_elms.length; i ++) {
+                    logos_elms[i].onmouseover = function() {
+                        changeColor(this, "unset");//unset
+                    };
+                }
+                sqr_div.style.setProperty("background-color", custom_style["content_color"], 'important');
+                //CONTENT - background:#fbfbfb
+                sqr_div.querySelectorAll('.squirrel-inline-div').forEach(function (el) {
+                    el.style.setProperty("background-color", custom_style["content_color"], 'important');
+                });
+                sqr_div.querySelectorAll('.squirrel-part').forEach(function (el) {
+                    el.style.setProperty("background-color", custom_style["content_color"], 'important');
+                });
+                sqr_div.querySelectorAll('.contract-offers').forEach(function (el) {
+                    el.style.setProperty("background-color", custom_style["content_color"], 'important');
+                });
+
+                //SQUIRREL TITLE
+                sqr_div.querySelectorAll('.squirrel-title').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                });
+                sqr_div.querySelectorAll('.offer_price').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                });
+
+                sqr_div.querySelectorAll('.tooltip_squirreltext').forEach(function (el) {
+                    el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                });
+
+                sqr_div.querySelectorAll('.offer_price > span').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                });
+
+                sqr_div.querySelectorAll('.squirrel-price-rrp').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    if (typeof custom_style["rrp_font_color"] != "undefined" && custom_style["rrp_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["rrp_font_color"], 'important');
+                    }
+                });
+
+                sqr_div.querySelectorAll('.squirrel-price-rrp > span').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    if (typeof custom_style["rrp_font_color"] != "undefined" && custom_style["rrp_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["rrp_font_color"], 'important');
+                    }
+                });
+
+                //DISCLAIMER
+                //  sqr_div.style.setProperty("background-color", custom_style["content_color"], 'important');
+
+                sqr_div.querySelectorAll('.squirrel-disclaimer > p').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                });
+
+                // OFFER LINK
+                sqr_div.querySelectorAll('.check_price_link > button').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["view_offer_link_font_color"], 'important');
+                    el.style.setProperty("background-color", custom_style["view_offer_link_color"], 'important');
+                    el.onmouseover = function() {
+                        changeColor(this, custom_style["view_offer_link_color"]);//unset
+                    };
+                });
+
+                //RETAILER TEXT
+                sqr_div.querySelectorAll('.logo-clickable > span').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["retailer_name_font_color"], 'important');
+                });
+            }
+        }
+
+        function adaptcCssToSquirrelWidth(div_containers){
+
+//            consoleLog("OBS:" , div_containers);
+            div_containers.forEach(function (div_container) {
+                div_container = div_container.target;
+
+                //consoleLog("OBS:" , div_container);
+                //var widget_container = document.querySelector(".squirrel_widget[data-squirrel-id='"+id+"']");
+                var squirrel_width = div_container.offsetWidth;
+               // consoleLog("Squirrel width: ",squirrel_width);
+
+                div_container.querySelectorAll('img').forEach(function (el) {
+                    el.style.setProperty("margin", '0', 'important');
+                    el.style.setProperty("border", '0', 'important');
+                });
+
+                div_container.querySelectorAll('.squirrel-img').forEach(function (el) {
+                    el.style.setProperty("display", 'block');
+
+                });
+                div_container.querySelectorAll('.squirrel_div .tooltip_squirrel').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+                });
+
+                div_container.querySelectorAll('.squirrel-img > img').forEach(function (el) {
+                    el.style.setProperty("margin", '-16px', 'important');
+                    el.style.setProperty("border", '2px solid lightgray', 'important');
+
+                });
+
+                div_container.querySelectorAll('.offer_price > span').forEach(function (el) {
+                    el.style.setProperty("font-size", custom_style["font_price"]);
+                    if (typeof custom_style["price_font_color"] != "undefined") {
+                        el.style.setProperty("color", custom_style["price_font_color"]);
+                    }
+                });
+
+                div_container.querySelectorAll('.check_price_btn').forEach(function (el) {
+                    el.style.setProperty("font-size", custom_style["font_button"],'important');
+                    el.style.setProperty("height", "33px", "important");
+                    el.style.setProperty("box-sizing", "border-box", "important");
+//                    el.style.setProperty("padding", '6px');
+                });
+
+                div_container.querySelectorAll('.check_price_btn > button').forEach(function (el) {
+                    el.style.setProperty("padding", '8px');
+                    el.style.setProperty("border-radius", '7px', 'important');
+                });
+                div_container.querySelectorAll('div.squirrel-price-rrp > span').forEach(function (el) {
+                    el.style.setProperty("font-size", custom_style["font_price_rrp"]);
+                    //el.style.setProperty("color", "grey", "important");
+                });
+
+
+                div_container.querySelectorAll('.price-with-tbc > span').forEach(function (el) {
+                    el.style.setProperty("font-size", custom_style["font_price"]);
+                });
+
+                div_container.querySelectorAll('.div-price-with-tbc').forEach(function (el) {
+                    el.style.setProperty("display", 'flex');
+                });
+
+
+
+                div_container.querySelectorAll('.offer_price.info-retailer').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+                });
+                div_container.querySelectorAll('.price-with-tbc').forEach(function (el) {
+                    el.style.setProperty("text-align", 'center');
+                });
+
+                div_container.querySelectorAll('.price-with-tbc').forEach(function (el) {
+                    el.style.setProperty("width", '50%');
+                });
+
+                div_container.querySelectorAll('div.squirrel-logo > a > img').forEach(function (el) {
+                    el.style.setProperty("width", 'auto');
+                });
+
+
+                div_container.querySelectorAll('#squirrel-big').forEach(function (el) {
+                    el.style.setProperty("display", 'block');
+                });
+
+                div_container.querySelectorAll('#squirrel-short').forEach(function (el) {
+                    el.style.setProperty("display", 'none');
+                });
+
+                if (typeof custom_style["show_header"] != "undefined" && custom_style["show_header"] == 0) {
+                    div_container.querySelectorAll('.squirrel-inline-div-id div.squirrel_brand').forEach(function (el) {
+                        el.style.setProperty("display", 'none');
+                    });
+                } else {
+
+                    div_container.querySelectorAll('.squirrel-inline-div-id div.squirrel_brand').forEach(function (el) {
+                        el.style.setProperty("display", 'block');
+                    });
+                }
+
+                if (typeof custom_style["show_logo"] != "undefined" && custom_style["show_logo"] == 0) {
+                    div_container.querySelectorAll('.squirrel-inline-div-id div.squirrel_brand img').forEach(function (el) {
+                        el.style.setProperty("display", 'none');
+                    });
+                }
+
+                div_container.querySelectorAll('.squirrel-inline-div-id div.squirrel-tabs-header').forEach(function (el) {
+                    el.style.setProperty("display", 'table');
+                });
+
+                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailer .squirrel-logo img').forEach(function (el) {
+                    el.style.setProperty("height", 'auto', 'important');
+                });
+
+                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailer .squirrel-title').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                });
+
+
+                div_container.querySelectorAll('.offer_price, .squirrel-price-rrp ').forEach(function (el) {
+                    el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                    el.style.setProperty("display", "inline-block");
+                });
+
+                div_container.querySelectorAll('.offer_price').forEach(function (el) {
+                    el.style.setProperty("padding-left", "10px","important");
+                    if (typeof custom_style["show_price"] != "undefined" && custom_style["show_price"] == 0) {
+                        el.style.setProperty("display", "none","important");
+                    }
+                });
+
+
+                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailer .squirrel-price, .squirrel-price.tbc').forEach(function (el) {
+                    el.style.setProperty("display", 'flex', 'important');
+                });
+
+
+
+
+                div_container.querySelectorAll('div.brand-short').forEach(function (el) {
+                    el.style.setProperty("display", "none");
+                });
+
+                div_container.querySelectorAll(' .squirrel-inline-div .squirrel-part .retailer, .squirrel-inline-div .squirrel-part .retailer .squirrel-price, .squirrel-price.tbc').forEach(function (el) {
+                    el.style.setProperty("display", 'flex', 'important');
+                    el.style.setProperty("padding-right", '5px', 'important');
+                });
+
+                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailers-container.desktop').forEach(function (el) {
+                    el.style.setProperty("max-height", "140px");
+                    el.style.setProperty("overflow-y", "auto");
+                    el.style.setProperty("overflow-x", "hidden");
+                });
+
+                div_container.querySelectorAll('.contract-thumbnail').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+                });
+                div_container.querySelectorAll('.contract-product').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+                });
+                div_container.querySelectorAll('div.contract-offer div.contract-details').forEach(function (el) {
+                    el.style.setProperty("width", 'calc(100% - 290px)');
+                });
+                div_container.querySelectorAll('div.contract-info img.contract-provider-logo').forEach(function (el) {
+                    el.style.setProperty("display", "none");
+                });
+
+                div_container.querySelectorAll('.contract-phone-info').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+                });
+                div_container.querySelectorAll('div.contract-pricing span span').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+
+                });
+
+                div_container.querySelectorAll('div.contract-pricing span').forEach(function (el) {
+                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+13+'px');
+                });
+
+                div_container.querySelectorAll('div.contract-info span').forEach(function (el) {
+                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+13+'px');
+                });
+
+                div_container.querySelectorAll('.contract-info div').forEach(function (el) {
+                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+13+'px');
+                });
+
+                div_container.querySelectorAll('.contract-info').forEach(function (el) {
+                    el.style.setProperty("width", '50%');
+                });
+
+                div_container.querySelectorAll('.contract-pricing').forEach(function (el) {
+                    el.style.setProperty("width", '50%');
+                });
+
+                div_container.querySelectorAll('.squirrel-disclaimer').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+                });
+
+                div_container.querySelectorAll('.offer_price').forEach(function (el) {
+                    //el.style.setProperty("width", '40%', 'important');
+                    //el.style.setProperty("display", 'inline-block');
+                });
+
+                div_container.querySelectorAll('.squirrel-price-rrp').forEach(function (el) {
+                    /*el.style.setProperty("width", '40%', 'important');
+                    el.style.setProperty("display", 'inline-block');*/
+                });
+
+                div_container.querySelectorAll('.squirrel-retailers-legend').forEach(function (el) {
+                    el.style.setProperty("display", 'flex');
+                });
+
+                                div_container.querySelectorAll('.squirrel-ad').forEach(function (el) {
+                    el.style.setProperty("float", 'left');
+                    el.style.setProperty("max-width", '55%');
+                    el.style.setProperty("display", 'inline-block');
+                    el.style.setProperty("margin-top", '5px');
+                });
+                div_container.querySelectorAll('.disclaimer_p').forEach(function (el) {
+                    el.style.setProperty("display", 'inline-block');
+                    el.style.setProperty("max-width", '43%', 'important');
+                    el.style.setProperty("margin", '5px 0px 0px', 'important');
+                    el.style.setProperty("padding", '2px 5px', 'important');
+                    el.style.setProperty("position", 'relative', 'important');
+                });
+                
+
+                //650
+
+
+                //320
+
+
+
+                if(squirrel_width<=860){
+
+                    div_container.querySelectorAll('.price-with-tbc > span').forEach(function (el) {
+                        el.style.setProperty("font-size", parseInt(custom_style["font_size"])+14+'px');
+                    });
+
+                    if(squirrel_width<=715){
+
+
+
+
+
+                        if(squirrel_width<=649) {
+                            div_container.querySelectorAll('div.squirrel-price-rrp > span').forEach(function (el) {
+                                el.style.setProperty("font-size", parseInt(custom_style["font_size"])+11+'px');
+                            });
+                            div_container.querySelectorAll('.offer_price > span').forEach(function (el) {
+                                el.style.setProperty("font-size", parseInt(custom_style["font_size"])+12+'px');
+                            });
+
+                            div_container.querySelectorAll('.check_price_btn').forEach(function (el) {
+                                el.style.setProperty("font-size", parseInt(custom_style["font_size"])+12+'px', 'important');
+                            });
+                            if(squirrel_width<=600) {
+                                
+                                div_container.querySelectorAll('.squirrel-ad').forEach(function (el) {
+                                    el.style.setProperty("float", 'none');
+                                    el.style.setProperty("max-width", '100%');
+                                    el.style.setProperty("display", 'block');
+                                    el.style.setProperty("margin", '16px auto 0px');
+                                });
+                                div_container.querySelectorAll('.disclaimer_p').forEach(function (el) {
+                                    el.style.setProperty("display", 'inline-block');
+                                    el.style.setProperty("max-width", '90%', 'important');
+                                    el.style.setProperty("margin", '0px auto', 'important');
+                                    el.style.setProperty("padding", '2px 5px', 'important');
+                                });
+
+                                
+                                div_container.querySelectorAll('.check_price_btn').forEach(function (el) {
+                                    el.style.setProperty("height", "28px", "important");
+//                    el.style.setProperty("padding", '6px');
+                                });
+
+                                div_container.querySelectorAll('.squirrel-img').forEach(function (el) {
+                                    el.style.setProperty("display", 'none');
+                                });
+
+                                div_container.querySelectorAll('.price-with-tbc > span').forEach(function (el) {
+                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+12+'px');
+                                });
+
+                                div_container.querySelectorAll('.contract-thumbnail').forEach(function (el) {
+                                    el.style.setProperty("display", 'none');
+                                });
+                                div_container.querySelectorAll('.contract-product').forEach(function (el) {
+                                    el.style.setProperty("display", 'none');
+                                });
+
+                                div_container.querySelectorAll('div.contract-offer div.contract-details').forEach(function (el) {
+                                    el.style.setProperty("width", 'calc(100% - 100px)');
+                                });
+
+                                div_container.querySelectorAll('div.contract-pricing span').forEach(function (el) {
+                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+12+'px');
+                                });
+
+                                div_container.querySelectorAll('div.contract-info span').forEach(function (el) {
+                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+12+'px');
+                                });
+                                div_container.querySelectorAll('.contract-info div').forEach(function (el) {
+                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+8+'px');
+                                });
+
+                                if(squirrel_width<=500) {
+
+                                    div_container.querySelectorAll('.offer_price.info-retailer').forEach(function (el) {
+                                        el.style.setProperty("display", 'none');
+                                    });
+
+                                    div_container.querySelectorAll('.div-price-with-tbc').forEach(function (el) {
+                                        el.style.setProperty("display", 'block');
+                                    });
+                                    div_container.querySelectorAll('.price-with-tbc').forEach(function (el) {
+                                        el.style.setProperty("width", '100%');
+                                    });
+                                    div_container.querySelectorAll('div.contract-pricing span span').forEach(function (el) {
+                                        el.style.setProperty("display", 'none');
+
+                                    });
+                                    if(squirrel_width<=415) {
+                                        div_container.querySelectorAll('.contract-info').forEach(function (el) {
+                                            el.style.setProperty("width", '60%');
+                                        });
+
+                                        div_container.querySelectorAll('.contract-pricing').forEach(function (el) {
+                                            el.style.setProperty("width", '40%');
+                                        });
+
+
+                                        div_container.querySelectorAll('.contract-phone-info').forEach(function (el) {
+                                            el.style.setProperty("display", 'none');
+
+                                        });
+                                        div_container.querySelectorAll('div.contract-info img.contract-provider-logo').forEach(function (el) {
+                                            el.style.setProperty("display", 'inline-block');
+                                            el.style.setProperty("height", '13px');
+                                            el.style.setProperty("position", 'relative');
+                                        });
+
+
+
+                                        div_container.querySelectorAll('div.contract-pricing span').forEach(function (el) {
+                                            el.style.setProperty("font-size", parseInt(custom_style["font_size"])+11+'px');
+                                        });
+
+                                        div_container.querySelectorAll('div.contract-info span').forEach(function (el) {
+                                            el.style.setProperty("font-size", parseInt(custom_style["font_size"])+11+'px');
+                                        });
+
+
+                                        div_container.querySelectorAll('div.squirrel-logo > a > img').forEach(function (el) {
+                                            //el.style.setProperty("width", '100%');
+                                        });
+                                        div_container.querySelectorAll('.check_price_btn').forEach(function (el) {
+                                            el.style.setProperty("font-size", parseInt(custom_style["font_size"])+10+'px', 'important');
+                                        });
+
+                                        div_container.querySelectorAll('.check_price_btn > button').forEach(function (el) {
+                                            el.style.setProperty("padding", '2px');
+                                        });
+
+                                        if(squirrel_width<=320) {
+
+                                                                                        div_container.querySelectorAll('.squirrel-ad').forEach(function (el) {
+                                                el.style.setProperty("margin", '5px -10px 0');
+                                            });
+                                            
+                                            if(squirrel_width<=270) {
+                                                div_container.querySelectorAll('#squirrel-big').forEach(function (el) {
+                                                    el.style.setProperty("display", 'none');
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-title').forEach(function (el) {
+                                                    el.style.setProperty("height", '55px', 'important');
+                                                    el.style.setProperty("min-height", '55px', 'important');
+                                                    el.style.setProperty("max-height", '55px', 'important');
+                                                });
+
+                                                div_container.querySelectorAll('.retailer').forEach(function (el) {
+                                                    el.style.setProperty("text-align", 'center', "important");
+                                                });
+                                                div_container.querySelectorAll('.offer_price').forEach(function (el) {
+                                                    el.style.setProperty("padding-left", "0","important");
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-retailers-legend').forEach(function (el) {
+                                                    el.style.setProperty("display", 'none');
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-inline-div-id div.squirrel_brand').forEach(function (el) {
+                                                    el.style.setProperty("display", 'none');
+                                                });
+                                                div_container.querySelectorAll('.squirrel-inline-div-id div.squirrel-tabs-header').forEach(function (el) {
+                                                    el.style.setProperty("display", 'none');
+                                                });
+
+                                                div_container.querySelectorAll('#squirrel-short').forEach(function (el) {
+                                                    el.style.setProperty("display", 'block');
+                                                });
+
+
+                                                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailer .squirrel-title').forEach(function (el) {
+                                                    el.style.setProperty("display", '-webkit-box');
+                                                    el.style.setProperty("text-align", 'center');
+                                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+16+'px');
+                                                    el.style.setProperty("line-height", '18px');
+                                                    el.style.setProperty("font-weight", '600');
+                                                    el.style.setProperty("font-family", custom_style["font_family"]);
+                                                    el.style.setProperty("margin-top", '8px');
+                                                    el.style.setProperty("margin-bottom", '4px');
+                                                    el.style.setProperty("position", 'relative');
+                                                    el.style.setProperty("max-height", '75px');
+                                                    el.style.setProperty("overflow", 'hidden');
+                                                    el.style.setProperty("-webkit-line-clamp", '3');
+                                                    el.style.setProperty("-webkit-box-orient", 'vertical');
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailer .squirrel-logo img').forEach(function (el) {
+                                                    el.style.setProperty("height", '35px', 'important');
+                                                });
+
+
+                                                div_container.querySelectorAll('.squirrel-price.tbc').forEach(function (el) {
+                                                    el.style.setProperty("text-align", 'center', 'important');
+                                                    el.style.setProperty("margin", '10px 0', 'important');
+                                                    el.style.setProperty("width", '100%', 'important');
+
+                                                });
+                                                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailers-container .retailer:only-child').forEach(function (el) {
+                                                    el.style.setProperty("padding", '0');
+                                                    el.style.setProperty("text-align", 'center', 'important');
+
+                                                });
+
+                                                div_container.querySelectorAll('.offer_price, .squirrel-price-rrp ').forEach(function (el) {
+                                                    el.style.setProperty("text-align", 'center', 'important');
+                                                });
+
+                                                div_container.querySelectorAll('.tooltip_squirrel ').forEach(function (el) {
+                                                    el.style.setProperty("display", 'none');
+                                                });
+
+                                                div_container.querySelectorAll('div.squirrel-inline-div div.squirrel-part .retailer a.check_price_link button.check_price_btn').forEach(function (el) {
+                                                    el.style.setProperty("width", '80%','important');
+                                                    el.style.setProperty("text-align", 'center','important');
+                                                    el.style.setProperty("float", 'none');
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-inline-div-id div.brand-short').forEach(function (el) {
+                                                    el.style.setProperty("margin", '0');
+                                                    el.style.setProperty("background", '#1e1e31');
+                                                    el.style.setProperty("color", '#fff');
+                                                    el.style.setProperty("padding", 'sans-serif');
+                                                    el.style.setProperty("font-family", custom_style["font_family"]);
+                                                    el.style.setProperty("letter-spacing", '0.6px');
+                                                    el.style.setProperty("position", 'relative');
+                                                    el.style.setProperty("line-height", '1.6875em');
+                                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+18+'px');
+                                                    if (typeof custom_style["show_header"] != "undefined" && custom_style["show_header"] == 0) {
+                                                        el.style.setProperty("display", 'none');
+                                                    } else {
+                                                        el.style.setProperty("display", 'block');
+                                                    }
+
+                                                });
+
+                                                if (typeof custom_style["show_logo"] != "undefined" && custom_style["show_logo"] == 0) {
+                                                    div_container.querySelectorAll('.squirrel-inline-div-id div.brand-short img').forEach(function (el) {
+                                                        el.style.setProperty("display", 'none');
+                                                    });
+
+                                                }
+
+                                                div_container.querySelectorAll('.squirrel-inline-div-id div.brand-short span').forEach(function (el) {
+                                                    el.style.setProperty("display", 'block');
+                                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+14+'px');
+                                                    el.style.setProperty("height", '30px');
+                                                    el.style.setProperty("width", 'calc(100% - 20px)');
+                                                    el.style.setProperty("font-weight", '600');
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-part .retailer .squirrel-img-short').forEach(function (el) {
+                                                    el.style.setProperty("text-align", 'center');
+                                                    el.style.setProperty("margin-top", '4px');
+                                                });
+                                                div_container.querySelectorAll('.squirrel-part .retailer .squirrel-img-short img').forEach(function (el) {
+                                                    el.style.setProperty("max-height", '25px');
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-inline-div-id div.brand-short img').forEach(function (el) {
+                                                    el.style.setProperty("max-height", '30px');
+                                                    el.style.setProperty("position", 'absolute');
+                                                    el.style.setProperty("right", '0');
+                                                    el.style.setProperty("top", '0');
+
+                                                });
+
+
+                                                div_container.querySelectorAll('.squirrel-inline-div .squirrel-part .retailers-container.desktop').forEach(function (el) {
+                                                    el.style.setProperty("max-height", '196px');
+                                                    el.style.setProperty("overflow", 'hidden');
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-part .retailer a.check_price_link button.check_price_btn').forEach(function (el) {
+                                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+12+'px','important');
+                                                });
+
+
+                                                div_container.querySelectorAll('.squirrel-disclaimer').forEach(function (el) {
+                                                    el.style.setProperty("display", 'none');
+                                                });
+
+
+                                                div_container.querySelectorAll('.squirrel-price-rrp, .offer_price ,.squirrel-inline-div .squirrel-part .retailer, .squirrel-inline-div .squirrel-part .retailer, .squirrel-inline-div .squirrel-part .retailer .squirrel-price, .squirrel-price.tbc').forEach(function (el) {
+                                                    el.style.setProperty("display", 'block', 'important');
+                                                });
+                                                if (typeof custom_style["show_price"] != "undefined" && custom_style["show_price"] == 0) {
+                                                    div_container.querySelectorAll('.offer_price').forEach(function (el) {
+                                                        el.style.setProperty("display", 'none', 'important');
+                                                    });
+                                                }
+
+                                                div_container.querySelectorAll('#squirrel-short div.squirrel-logo  img').forEach(function (el) {
+                                                    el.style.setProperty("width", 'auto', 'important');
+                                                });
+
+                                                div_container.querySelectorAll('.offer_price.info-retailer').forEach(function (el) {
+                                                    el.style.setProperty("display", 'none', 'important');
+                                                });
+
+                                                div_container.querySelectorAll('.offer_price, .squirrel-price-rrp').forEach(function (el) {
+                                                    el.style.setProperty("width", '100%', 'important');
+                                                });
+
+
+                                                div_container.querySelectorAll('.squirrel-inline-div-id').forEach(function (el) {
+                                                    el.style.setProperty("min-height", '195px', 'important');
+
+                                                });
+
+                                                div_container.querySelectorAll('.squirrel-price-rrp > span').forEach(function (el) {
+                                                    el.style.setProperty("font-size", parseInt(custom_style["font_size"])+10+'px', 'important');
+                                                });
+
+                                                div_container.querySelectorAll('.brand-short > span').forEach(function (el) {
+                                                    el.style.setProperty("padding-left", '10px', 'important');
+                                                });
+
+                                                div_container.querySelectorAll('.brand-short > img').forEach(function (el) {
+                                                    el.style.setProperty("height", '23px', 'important');
+                                                });
+
+
+
+                                            }
+
+
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+
+
+                    }
+                }
+            });
+        }
+
+
+
+
+
+
+
+        function assign_click_behaviour(obj, logo_click, offer, squirrel_id){
+
+            var md5_val = '';
+
+            if (obj.hasAttribute('data-href') && obj.getAttribute('data-href') != '' && obj.getAttribute('data-href') != obj.getAttribute('href')) {
+
+                obj.setAttribute('href', obj.getAttribute('data-href'));
+
+                if (obj.hasAttribute('data-href-clean') && obj.getAttribute('data-href-clean')!= '' && obj.getAttribute('data-href-clean') != 'undefined') {
+                    setTimeout(function () {
+                        obj.setAttribute('href', obj.getAttribute('data-href-clean'));
+                    }, 100);
+                }
+            }
+
+            var retailerIdClick = obj.getAttribute("data-id-retailer");
+            if (!event.isTrusted) {
+                event.preventDefault();
+            } else {
+                if(obj.hasAttribute('data-tds-offer-id')){
+                    sendReport(offersIdsList, squirrel_id, obj.getAttribute('data-tds-offer-id'), true, logo_click, md5_val, retailerIdClick, null);
+                } else {
+                    sendReport(offersIdsList, squirrel_id, obj.getAttribute('data-offer-id'), false, logo_click, md5_val, retailerIdClick, null);
+                }
+            }
+        }
+
+        function call_squirrel_file(id, pos, squirrel_container, is_button){
+            var nocache = "";
+            if(preview){
+                //nocache = "?nocache=" + randNumb;
+                renderHTML(id, pos, squirrel_container, is_button);
+            } else {
+                include_script(getSrcOrigin + "/" + client_id + "/" + countrySqr + "/squirrel" + id + ".js" + nocache,
+                    renderHTML, id, pos, squirrel_container, is_button);
+            }
+        }
+
+        function call_playlist_file(id, pos, playlist_container, asins_md5, extra_args) {
+            var nocache = "?" + extra_args;
+            if (preview) {
+                //nocache = "?nocache=" + randNumb + "&" + extra_args;
+                renderHTMLPlaylist(id, pos, playlist_container, asins_md5)
+            } else {
+                include_script(getSrcOrigin + "/" + client_id + "/" + countrySqr + "/playlists/" + id + ".js" + nocache,
+                    renderHTMLPlaylist, id, pos, playlist_container, asins_md5);
+            }
+
+            //include_script("http://localhost:8003/3/gb/playlists/a6f8001f5a41899072ccdb901b40720c.js" + nocache,
+             //   renderHTMLPlaylist, id, pos, playlist_container, asins_md5);
+
+
+        }
+
+        function renderHTMLPlaylist(id, pos, playlist_container, asins_md5){
+
+            /*if(preview && typeof squirrel_preview_data !=='undefined' && squirrel_preview_data !==''){
+                squirrel_data = squirrel_preview_data;
+            }*/
+
+            if(typeof squirrel_data === "undefined" || !squirrel_data.length){
+                default_behaviour(pos, playlist_container);
+                return;
+            }
+
+            consoleLog("SQUIRREL_DATA playlist:" , squirrel_data);
+            squirrel_data_position[pos] = squirrel_data;
+            offersIdsPlaylist = [];
+
+            if(is_tbc_playlist) {
+                if (typeof playlist_title === 'undefined') {
+                    playlist_title = "Best offers for " + squirrel_data_position[pos][0].product_name + " and similar products";
+                }
+            }
+
+            var html  = getHTMLPlaylist(squirrel_data_position[pos],id, pos);
+            for (var i=0; i < squirrel_data_position[pos].length; i++){
+                const obj= {
+                    squirrel_id: squirrel_data_position[pos][i]["squirrel_id"],
+                    offers_list: squirrel_data_position[pos][i]["offers_list"]
+                }
+                offersIdsPlaylist.push(obj);
+
+
+            }
+
+            var divContainer      = document.createElement('div');
+
+            divContainer.innerHTML = html;
+
+            playlist_container.appendChild(divContainer);
+            playlist_container.dataset.loaded = "true";
+            playlist_container.dataset.position = pos;
+            playlist_container.dataset.squirrelId = id;
+
+            let a_href = '<a style="font-family: sans-serif !important; color: #009efb !important; text-decoration: none !important;text-decoration-color: unset !important; \\n\' +\n' +
+                'text-decoration-thickness: unset !important; text-underline-offset: unset !important;"';
+
+            disclaimer_text = disclaimer_text.replace("<a", a_href);
+            document.getElementById("disclaimer_text_" + pos).innerHTML = disclaimer_text;
+
+            //PLAYLIST CAROUSEL
+
+            /*if(show_external_val == 1) {
+                pushExt(pos);
+            }*/
+
+            if(typeof playlist_title != 'undefined') {
+                document.getElementById("squirrel-inline-playlist-title_" + pos).innerText = playlist_title;
+            }
+
+
+            var gap = 16;
+
+
+            window["carousel_squirrel_"+pos] = document.getElementById("carousel_squirrel_"+pos);
+            window["squirrel_cont_"+pos] = document.getElementById("squirrel_cont_"+pos);
+            window["next_squirrel_"+pos] = document.getElementById("next_squirrel_"+pos);
+            window["prev_squirrel_"+pos] = document.getElementById("prev_squirrel_"+pos);
+
+            window["next_squirrel_"+pos].addEventListener("click", e => {
+                window["carousel_squirrel_"+pos].scrollBy(width + gap, 0);
+                if (window["carousel_squirrel_"+pos].scrollWidth !== 0) {
+                    window["prev_squirrel_"+pos].style.display = "flex";
+                }
+                if (window["squirrel_cont_"+pos].scrollWidth - width - gap <= window["carousel_squirrel_"+pos].scrollLeft + width) {
+                    window["next_squirrel_"+pos].style.display = "none";
+                }
+            });
+            window["prev_squirrel_"+pos].addEventListener("click", e => {
+                window["carousel_squirrel_"+pos].scrollBy(-(width + gap), 0);
+                if (window["carousel_squirrel_"+pos].scrollLeft - width - gap <= 0) {
+                    window["prev_squirrel_"+pos].style.display = "none";
+                }
+                if (!window["squirrel_cont_"+pos].scrollWidth - width - gap <= window["carousel_squirrel_"+pos].scrollLeft + width) {
+                    window["next_squirrel_"+pos].style.display = "flex";
+                }
+            });
+
+            var width = window["carousel_squirrel_"+pos].offsetWidth;
+            window.addEventListener("resize", e => {
+                width = window["carousel_squirrel_" + pos].offsetWidth;
+                if (window["carousel_squirrel_" + pos].scrollWidth == width) {
+                    window["next_squirrel_" + pos].style.display = "none";
+                } else {
+                    window["next_squirrel_" + pos].style.display = "flex";
+                }
+            });
+
+
+
+            document.querySelector('#carousel_squirrel_'+pos).addEventListener('scroll', () => {
+
+                if (window["squirrel_cont_"+pos].scrollWidth - width === window["carousel_squirrel_"+pos].scrollLeft) {
+                    //alert('right end');
+                    window["next_squirrel_"+pos].style.display = "none";
+                } else {
+                    window["next_squirrel_"+pos].style.display = "flex";
+                }
+
+                if (window["carousel_squirrel_"+pos].scrollLeft === 0) {
+                    //alert('left end');
+                    window["prev_squirrel_"+pos].style.display = "none";
+                } else {
+                    window["prev_squirrel_"+pos].style.display = "flex";
+                }
+
+            });
+
+            if (window["carousel_squirrel_"+pos].scrollWidth == width) {
+                window["next_squirrel_"+pos].style.display = "none";
+            }
+
+            setAfterRenderPlaylist(pos);
+
+            if(typeof squirrelPreviewReactivateButtons !== "undefined"){
+                squirrelPreviewReactivateButtons();
+            }
+
+                            if (show_external_val == 1) {
+                    apply_ext_div("playlist", pos, id);
+                }
+            
+
+            //BUTTON HREFS ANS SEN REPORTS
+
+            var squirrel_country = countrySqrPlaylist;
+
+            //if(forbidden_countries.indexOf(squirrel_country.toUpperCase()) === -1 )
+            //{
+
+            var playlist_md5 = document.querySelector('#squirrel-inline-playlist-id_'+pos).getAttribute('data-playlist-md5');
+
+            document.querySelectorAll('#squirrel-inline-playlist-id_'+pos+' .retailer').forEach(function(offer){
+                offer.querySelectorAll('button').forEach(function(offer_button){
+                    offer_button.addEventListener("click", function(event) {
+
+                        var md5_val = '';
+                        consoleLog(55555);
+                        //var button = offer.querySelector('a.cheack_price_btn.check_price_link');
+                        var button = offer_button.closest('a');
+
+                        if (button.hasAttribute('data-href') && button.getAttribute('data-href') != '' && button.getAttribute('data-href') != button.getAttribute('href')) {
+
+                            button.setAttribute('href', button.getAttribute('data-href'));
+
+                            if (button.hasAttribute('data-href-clean') && button.getAttribute('data-href-clean')!= '' && button.getAttribute('data-href-clean') != 'undefined') {
+                                setTimeout(function () {
+                                    button.setAttribute('href', button.getAttribute('data-href-clean'));
+                                }, 100);
+                            }
+                        }
+
+                        var retailerIdClick = button.getAttribute("data-id-retailer");
+
+                        if (!event.isTrusted) {
+                            event.preventDefault();
+                        } else {
+                            consoleLog(offer.dataset);
+                            sendReport(JSON.stringify(offersIdsPlaylist), offer.dataset.squirrelId, button.getAttribute('data-offer-id'), false, false, md5_val, retailerIdClick, playlist_md5);
+                        }
+                    });
+                });
+                if(offer.querySelector('.logo-clickable-playlist')) {
+                    offer.querySelector('.logo-clickable-playlist').addEventListener("click", function (event) {
+
+                        var md5_val = '';
+
+                        var logo = offer.querySelector('.logo-clickable-playlist');
+                        if (logo.hasAttribute('data-href') && logo.getAttribute('data-href') != '' && logo.getAttribute('data-href') != logo.getAttribute('href')) {
+                            logo.setAttribute('href', logo.getAttribute('data-href'));
+
+                            if(logo.hasAttribute('data-href-clean') && logo.getAttribute('data-href-clean')!='' && logo.getAttribute('data-href-clean')!='undefined') {
+                                setTimeout(function () {
+                                    logo.setAttribute('href', logo.getAttribute('data-href-clean'));
+                                }, 100);
+                            }
+                        }
+
+
+                        if (!event.isTrusted) {
+                            event.preventDefault();
+                        } else {
+                            consoleLog(offer.dataset);
+                            sendReport(JSON.stringify(offersIdsPlaylist), offer.dataset.squirrelId, logo.getAttribute('data-offer-id'), false,true,md5_val, null, playlist_md5);
+                        }
+                    });
+                }
+
+            });
+
+
+
+            sendReport(JSON.stringify(offersIdsPlaylist), id,null,false,false, null, null, id, asins_md5);
+
+        }
+
+        function getHTML(squirrel_data_local,id, pos,is_button) {
+            var product_image = squirrel_data_local["product_img"];
+            if(product_image == ''){
+                product_image =  getSrcOrigin + '/assets/images/amazon-no-image.jpg';
+            }
+
+            var product_title = squirrel_data_local["product_name"].slice(0, 50) + (squirrel_data_local["product_name"].length > 50 ? "..." : "")
+            var offers = squirrel_data_local["offers"];
+            var tds_offers = squirrel_data_local["tds_offers"];
+            var playlist_title_style = '';
+            var tds_deals_header = '';
+            var show_tds = false;
+            if(tds_offers && tds_offers.length > 0){
+                show_tds = true;
+                tds_deals_header = '  <div class="squirrel-tabs-header" style="width: 100%;text-align: center;line-height: 17px;" >'
+                    +'      <a id="squirrel-contract" class="selected"  style="#5bc0de !important">Contract</a>'
+                    +'      <a id="squirrel-sim-free" class="">SIM free</a>'
+                    +'  </div>'
+            }
+
+            if(typeof custom_style["id"] !="undefined") {
+                //TITLE
+                if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                    playlist_title_style += 'font-family:'+custom_style["font_family"]+' !important;';
+                }
+                if (typeof custom_style["header_color"] != "undefined" && custom_style["header_color"] != "") {
+                    playlist_title_style += 'background-color:'+custom_style["header_color"]+' !important;';
+                }
+                if (typeof custom_style["header_font_color"] != "undefined" && custom_style["header_font_color"] != "") {
+                    playlist_title_style += 'color:'+custom_style["header_font_color"]+' !important;';
+                }
+
+                //playlist_title_style = '"'+playlist_title_style+'"';
+            }
+
+            consoleLog("IS BUTTON", is_button);
+            if(is_button == "1"){
+
+                var savings = 0;
+                var rrp = offers[0]["rrp"];
+                var text_aux ="";
+
+                if (rrp > offers[0]["price"]){
+                    savings = (rrp - offers[0]["price"]) * 100 / rrp;
+                    savings = Math.round(savings);
+                    if ( savings >0 ){
+                        text_aux = '(Save ' +savings + '%)';
+                    }
+                }
+                var href_val = offers[0]["href"];
+                if(offers[0]["href_clean"]!='') {
+                    href_val = offers[0]["href_clean"];
+                }
+                var label_view_offer = squirrel_data_local["currency_symbol"] + offers[0]["price"]+' at ';
+                if(offers[0]["price"]=='check_price'){
+                    label_view_offer = 'Check price';
+                    if(squirrel_data_local.translations && squirrel_data_local.translations.check_price_button){
+                        label_view_offer = squirrel_data_local.translations.check_price_button;
+                    }
+                } else {
+                    if (typeof custom_style["show_price"] != "undefined" && custom_style["show_price"] == 0) {
+                        label_view_offer = '';
+                    }
+                }
+
+               var retailer_id_data = '';
+
+                if(offers[0]["offer_id"] == offers[0]["retailer_id"]) {
+                    retailer_id_data = ' data-id-retailer="' + offers[0]["retailer_id"] + '" ';
+                }
+
+                var html = getCssStyleButton() +'<div class="button_only" style="border-radius: 7px; width: 100% !important; margin: 0; height: 100%!important; font-size: '+custom_style["font_button"]+' !important; display: grid">'
+                    + '             <div class="view-offer" style="height:100%">'
+                    + '                 <a class="check_price_btn check_price_link" rel="sponsored, nofollow" target="_blank" href="' + href_val + '" data-href="' + offers[0]["href"] + '" data-href-clean="' + offers[0]["href_clean"] + '" data-api-id="' + offers[0]["api_id"] + '" data-offer-id="' + offers[0]["offer_id"] + '" '+retailer_id_data+'>'
+                    + '                     <button style="height: 100%" class="check_price_btn">' + label_view_offer +offers[0]["retailer_name"]+' ' + text_aux +'</button>'
+                    + '                 </a>'
+                    + '             </div>'
+                    + '           </div>';
+            }
+            else{
+                var html = getCssStyle()
+                    +'<div id="squirrel-inline-div-id-' + pos +'" class="squirrel-inline-div-id" data-id="'+id+'">'
+                    +'  <div class="squirrel_brand"  style="'+ playlist_title_style +'">'
+                    +'      <span  >' + squirrel_data_local["product_name"] +' deals</span>'
+                    +'          <img src="' + getSrcOrigin + '/assets/images/xs-squirrel.png" style="height: 30px !important; width: 30px !important; padding-top: 6px !important; display: inline !important; box-sizing: border-box !important;">'
+                    +'  </div>'
+                    +'  <div class="brand-short" >'
+                    +'      <span>RECOMMENDED DEAL</span>'
+                    +'      <img src="' + getSrcOrigin + '/assets/images/xs-squirrel.png">'
+                    +'  </div>'
+                    + tds_deals_header
+                    +'  <div class="squirrel-inline-div" id="squirrel-big" style="    padding: 5px 0 10px 5px;">';
+                if(show_tds){
+                    html +=            get_tds_html(tds_offers, product_image,squirrel_data_local)
+                        +'      <div class="squirrel-part" style="display: none;">';
+                }else{
+                    html += '      <div class="squirrel-part" style="display: flex;">';
+                }
+
+                html +='          <div class="squirrel-img">'
+                    +'              <img src="'+product_image+'"  alt="' + product_title +'" style="display: inline; margin-top: -16px">'
+                    +'          </div>'
+                    +'          <div class="retailers-container desktop">'
+                    + get_offer_html(offers, squirrel_data_local, false)
+                    + '          </div>'
+                    +'      </div>'
+                    +'  </div>';
+                /* Widget for the recommended deal */
+                html += '  <div class="squirrel-inline-div" id="squirrel-short" style="padding: 0;">'
+                    +'      <div class="squirrel-part">'
+                    +'          <div class="retailers-container desktop">'
+                    +               get_offer_html(offers, squirrel_data_local, true)
+                    +'          </div>'
+                    +'      </div>'
+                    +'  </div>';
+
+                                    if(show_external_val == "1"){
+                        html +='  <div class="squirrel-disclaimer" style="display: inline-block;  width: 100%;">';
+
+                        html += '<div class="squirrel-ad" style="float: left; display: block; margin-top: 0px;">\n'
+                            +'      <div class="squirrel-ad-container" style="width: 320px; height: 50px; margin: 0px auto; max-height: 50px; overflow: hidden;">\n'
+                            +'          <div id="squirrel_'+id+'_'+pos+'"></div>\n'
+                            +'      </div>\n'
+                            +'   </div>\n';
+
+                        html +='      <p class="disclaimer_p font-squirrel-sqrl-black" id="disclaimer_text_'+pos+'" style="padding: 2px 5px; font-size: '+custom_style["disclaimer_font_size"]+'; margin: 5px 0px 0px; font-family: ' + custom_style["font_family_disclaimer"] +'; line-height: 1.3em;"></p>'
+                        html+='  </div>';
+
+
+                    }
+                
+
+                html+='</div>';
+
+
+            }
+
+
+            return html;
+
+        }
+
+        function get_tds_html(tds_offers, product_image, squirrel_data_local){
+
+            if(!tds_offers || tds_offers.length <= 0){
+                return '';
+            }
+
+            var html = '<div class="contract-offers">';
+
+            //{% for offer in product.tdsDeal.offers %}
+            var mobile_data = 0;
+            var voiceCredits = 0;
+            var smsCredits = 0;
+            for (var j = 0; j < tds_offers.length; j++) {
+
+                if(tds_offers[j]["mobileData"] == 2147483){
+                    mobile_data = "Unlimited";
+                }else{
+                    mobile_data = tds_offers[j]["mobileData"] + "GB";
+                }
+
+                if(tds_offers[j]["voiceCredits"] == 2147483647){
+                    voiceCredits = "Unlimited minutes";
+                }else{
+                    voiceCredits = tds_offers[j]["voiceCredits"];
+                }
+
+                if(tds_offers[j]["smsCredits"] == 2147483647){
+                    smsCredits = "Unlimited texts";
+                }else{
+                    smsCredits = tds_offers[j]["smsCredits"];
+                }
+                html += '<div class="contract-offer" data-tds-offer-id="'+tds_offers[j]["id"]+'">' //
+                    + '     <div class="contract-thumbnail">'
+                    + '         <img src="'+ product_image +'" alt="'+tds_offers[j]["offerName"]+'">'//
+                    + '     </div>'
+                    + '     <div class="contract-product">'
+                    + '         <span style="color: rgb(75, 77, 84);">'+tds_offers[j]["offerName"]+'</span>'
+                    + '     </div>'
+                    + '     <div class="contract-phone-info">'
+                    + '         <img src="'+tds_offers[j]["tdsProvider"]["image"]+'" alt="'+tds_offers[j]["tdsProvider"]["name"]+'">' //
+                    + '     </div>'
+                    + '     <div class="contract-details">'
+                    + '          <div class="contract-info">'
+                    + '              <div>'
+                    + '                  <img class="contract-provider-logo" src="'+tds_offers[j]["tdsProvider"]["image"]+'" alt="'+tds_offers[j]["tdsProvider"]["name"]+'">'
+                    + '                  <span class="memory">'+ mobile_data +'</span>' //
+                    + '                  <span class="gen-speed">'+tds_offers[j]["mobileDataGen"]+'G</span>' //
+                    + '                  Data'
+                    + '              </div>'
+                    + '              <span>'+ voiceCredits +'</span>' //
+                    + '              <span>'+ smsCredits +'</span>' //
+                    + '          </div>'
+                    + '          <div class="contract-pricing">'
+                    + '              <span>'+squirrel_data_local["currency_symbol"]+tds_offers[j]["monthlyFee"]+'/month <span>('+tds_offers[j]["contractTermInMonths"]+' months)</span></span>' //
+                    + '              <span>'+squirrel_data_local["currency_symbol"]+tds_offers[j]["upfrontPrice"]+' upfront</span>'//
+                    + '              <span class="tco">Total cost '+squirrel_data_local["currency_symbol"]+tds_offers[j]["tcoPrice"]+'</span>' //
+                    + '          </div>'
+                    + '      </div>'
+                    + '      <div class="contract-view-offer">'
+                    + '          <a class="check_price_btn check_price_link" rel="sponsored, nofollow" data-tds-offer-id="' + tds_offers[j]["id"] + '" target="_blank" href="'+tds_offers[j]["deepLink"]+'">'//
+                    + '              <button class="check_price_btn">View offer</button>'
+                    + '          </a>'
+                    + '          <img src="'+tds_offers[j]["tdsShop"]["image"]+'" alt="'+tds_offers[j]["tdsShop"]["name"]+'">'//
+                    + '      </div>'
+                    + '  </div>';
+            }
+            //    {% endfor %}
+
+            html += '</div>';
+
+            return html;
+        }
+
+        function get_offers_playlist_html(squirrel_data_local, pos){
+
+            var offers_html = '';
+            for (var i = 0; i < squirrel_data_local.length; i++) {
+
+                var product_image = squirrel_data_local[i]["product_img"];
+                if(product_image == ''){
+                    product_image =  getSrcOrigin + '/assets/images/amazon-no-image.jpg';
+                }
+
+                var product_title = squirrel_data_local[i]["product_name"].slice(0, 50) + (squirrel_data_local[i]["product_name"].length > 50 ? "..." : "")
+
+                var label_view_offer = 'View offer';
+                if(squirrel_data_local[i].translations && squirrel_data_local[i].translations.view_offer){
+                    label_view_offer = squirrel_data_local[i].translations.view_offer;
+                }
+
+                var label_featured_offer = 'Featured';
+                if(squirrel_data_local[i].translations && squirrel_data_local[i].translations.featured_offer){
+                    label_featured_offer = squirrel_data_local[i].translations.featured_offer;
+                }
+
+                var label_offers = 'Offers';
+                if(squirrel_data_local[i].translations && squirrel_data_local[i].translations.offers){
+                    label_offers = squirrel_data_local[i].translations.offers;
+                }
+
+                offers_html += '\n' +
+                    '                            <div class="retailer item" data-squirrel-id="' + squirrel_data_local[i]["squirrel_id"] + '" style="    border: 1px solid rgba(0,0,0,.125);     min-height: 330px;">\n' +
+                    '                                <div class="all_info">\n' +
+                    '                                    <div class="squirrel_brand" style="display:none">\n' +
+                    '                                        <span>' + squirrel_data_local[i]["product_name"] + '</span>\n' +
+                    '                                        <img src="' + getSrcOrigin + '/assets/images/xs-squirrel.png">\n' +
+                    '                                    </div>\n' +
+                    '                                    <div class="squirrel-img" style="margin: 0 auto !important; display:block">\n' +
+                    '                                        <img src="' + product_image + '" alt="' + product_title + '">\n' +
+                    '                                    </div>\n' +
+                    '                                    <div class="squirrel-title" style="font-size: 10px">\n' +
+                    '                                        <span class="font-squirrel-sqrl-black">' + squirrel_data_local[i]["product_name"] + '</span>\n' +
+                    '                                    </div>';
+
+                var offers = squirrel_data_local[i]["offers"];
+
+                var total_offers = offers.length;
+                if(total_offers > 3){
+                    total_offers = 3;
+                }
+                for (var j = 0; j < total_offers; j++) {
+                    var retailer_id_data = "";
+
+                    if(offers[j]["offer_id"] == offers[j]["retailer_id"]){
+                        retailer_id_data = ' data-id-retailer="' +offers[j]["retailer_id"] + '" '
+                    }
+                    if(offers[j]["price"]=='check_price'){
+                        offers[j]["price"] = '&nbsp;';
+                        label_view_offer = 'Check price';
+                        if(squirrel_data_local[i].translations && squirrel_data_local[i].translations.check_price_button){
+                            label_view_offer = squirrel_data_local[i].translations.check_price_button;
+                        }
+                    }
+
+                    if(offers[j]["promoted_offer"] == "1" && offers.length>1){
+                        offers_html += '<div class="squirrel-retailers-legend" style="margin-left: 10px; margin-right: 10px; margin-bottom: -5px">'+label_featured_offer+'</div>';
+                    }
+
+                    offers_html += '<div class="offer-row" data-api-id="' + offers[j]["api_id"] + '"  data-offer-id="' + offers[j]["offer_id"] + '" style="width: 90% !important; display: flex !important; line-height: normal !important;">\n';
+                    offers_html +=     '                                        <div class="squirrel-logo" style="width: 40%; float:left">\n' +
+                        '                                            <a class="logo-clickable-playlist" style="text-decoration: none !important;text-decoration-color: unset !important;" rel="sponsored, nofollow" target="_blank" href="' + offers[j]["href_clean"] + '" data-href="' + offers[j]["href"] + '" data-href-clean="' + offers[j]["href_clean"] + '" data-api-id="' + offers[j]["api_id"] + '" data-offer-id="' + offers[j]["offer_id"] + '">\n';
+                    if (typeof custom_style["retailer_name_only"] != "undefined" && custom_style["retailer_name_only"] == 1) {
+                        offers_html += '<span style="font-size: 10px !important; color: black !important;">' + offers[j]["retailer_name"] + '</span>\n';
+                    } else {
+                        offers_html += '<img src="' + offers[j]["retailer_image"].replace("https://squirrels.getsquirrel.co",getSrcOrigin) + '" alt="' + offers[j]["retailer_name"] + '" title="' + offers[j]["retailer_name"] + '"  style="width: auto; height: auto;">\n';
+                    }
+                    //'                                                <img src="' + offers[j]["retailer_image"] + '" alt="' + offers[j]["retailer_name"] + '" title="' + offers[j]["retailer_name"] + '"  style="height: 16px;">\n' +
+                    offers_html += '                                            </a>\n' +
+                        '                                        </div>\n' +
+                        '                                        <div class="squirrel-price with_rrp font-squirrel-sqrl-black" style="width: 35%; float:left;  display: flex; margin: 0; flex: 0 !important;">\n' +
+                        '                                            <div class="offer_price" style="padding: 10px 10px 10px 10px !important;">\n';
+                    if (offers[j]["price"] == '') {
+                        offers_html += '<span style="display:none; font-size: 12px;">' + squirrel_data_local[i]["currency_symbol"] + offers[j]["price"] + '</span>\n';
+                    } else {
+                        offers_html += '<span style="font-size: 12px;">' + squirrel_data_local[i]["currency_symbol"] + offers[j]["price"] + '</span>\n';
+                    }
+
+                    var href_val = offers[j]["href"];
+                    if (offers[j]["href_clean"] != '') {
+                        href_val = offers[j]["href_clean"];
+                    }
+
+                    offers_html += '                                            </div>\n' +
+                        '                                        </div>\n' +
+                        '                                        <div class="view-offer" style="width: 30%; float:left; font-size: 10px;    display: flex;">\n' +
+                        '                                            <a style="    width: 100%;" class="cheack_price_btn check_price_link" rel="sponsored, nofollow" target="_blank" href="' + href_val + '" data-href="' + offers[j]["href"] + '" data-href-clean="' + offers[j]["href_clean"] + '" data-api-id="' + offers[j]["api_id"] + '" data-offer-id="' + offers[j]["offer_id"] + '" ' +retailer_id_data+ '>\n' +
+                        '                                                <button class="cheack_price_btn font-squirrel-sqrl-white" style="font-size: 10px !important;padding: 5px 1px 5px 1px;min-width: 0px !important; width: 60px !important; font-family: sans-serif !important; line-height: normal !important;">'+label_view_offer+'</button>\n' +
+                        '                                            </a>\n' +
+                        '                                        </div>\n' +
+                        '                                    </div>';
+
+                    if(offers[j]["promoted_offer"] == "1" && offers.length>1){
+                        offers_html += '<div class="squirrel-retailers-legend" style="margin-left: 10px; margin-right: 10px; margin-top: -5px; margin-bottom: -5px">'+label_offers+'</div>';
+                    }
+
+                }
+
+                offers_html += '                               </div>' +
+                    '                           </div>';
+
+                if ( ( is_tbc_playlist || (typeof make_model_playlist_id_position !== "undefined" && make_model_playlist_id_position[pos] &&  make_model_playlist_id_position[pos] != 0) ) && i == 0 ) {
+                    offers_html += '<div style="border-right: 2px solid; border-color: '+custom_style["header_color"]+'; width: 0px;"></div>';
+                    is_tbc_playlist = false;
+
+                }
+            }
+
+            return offers_html;
+        }
+
+
+        function get_offer_html(offers, squirrel_data_local, short){
+
+            var aux_offers = [];
+
+            var offer = '';
+            var virg = "";
+            var tbc_text = "";
+
+            if(offersIdsList.length>0){
+                virg = ",";
+            }
+            var label_view_offer = 'View offer';
+            var label_featured_offer = 'Featured';
+            var label_offers = 'Offers';
+
+            if(squirrel_data_local.translations){
+                if(squirrel_data_local.translations.view_offer){
+                    label_view_offer = squirrel_data_local.translations.view_offer;
+                }
+
+                if(squirrel_data_local.translations.featured_offer){
+                    label_featured_offer = squirrel_data_local.translations.featured_offer;
+                }
+
+                if(squirrel_data_local.translations.offers){
+                    label_offers = squirrel_data_local.translations.offers;
+                }
+            }
+
+
+            for (var j = 0; j < offers.length; j++) {
+
+                if(offers[j]["offer_id"]!='' && offers[j]["offer_id"]!=undefined) {
+                    aux_offers.push(offers[j]["offer_id"]);
+                    if(offersIdsList.indexOf(offers[j]["offer_id"])<0){
+
+                        if(offers[j]["offer_id"] == offers[j]["retailer_id"]){
+                            tbc_text = "tbc_";
+                        }
+
+                        offersIdsList += virg + tbc_text + offers[j]["offer_id"];
+                        virg = ",";
+                    }
+
+                }
+
+                if(offers[j]["price"]=='check_price'){
+                    offers[j]["price"] = 'Check price here';
+                    if(squirrel_data_local.translations && squirrel_data_local.translations.check_price){
+                        offers[j]["price"] = squirrel_data_local.translations.check_price;
+                    }
+                }
+
+                /*<a class="logo-clickable" rel="sponsored, nofollow" target="_blank"
+                 href="https://www.idealo.co.uk/compare/6837655.html?utm_medium=affiliate&amp;utm_source=zanoxuk&amp;utm_campaign=!!!id!!!&amp;utm_content=feed&amp;camp=zanoxuk"
+                  data-href="https://redirect.viglink.com"
+                data-href-clean="https://www.idealo.co.ukp=zanoxuk">'*/
+
+                var offer_image = "";
+                var product_title = "";
+                var offer_price = "";
+                var offer_rrp = "";
+                var with_rrp = "";
+                var tooltip_text = "";
+                var retailer_id_data = "";
+                var href_val = offers[j]["href"];
+
+                if(short){
+                    product_title = '<div class="squirrel-title"><span id="title-short">' + squirrel_data_local["product_name"] + '</span></div>';
+
+                }
+
+                if(offers[j]["offer_id"] == offers[j]["retailer_id"]){
+                    retailer_id_data = ' data-id-retailer="' +offers[j]["retailer_id"] + '" '
+                }
+
+                if(offers[j]["href_clean"]!=''){
+                    href_val = offers[j]["href_clean"];
+                }
+
+                if (typeof custom_style["retailer_name"] != "undefined" && custom_style["retailer_name"] == 1) {
+                    offer_image = '<span style="font-size: '+custom_style["font_retailer"]+' !important; color: black !important; line-height: 17px; !important">'+offers[j]["retailer_name"]+'</span>\n';
+                } else {
+                    offer_image = '<img src="' + offers[j]["retailer_image"].replace("https://squirrels.getsquirrel.co",getSrcOrigin) + '" alt="' + offers[j]["retailer_name"] + '" title="' + offers[j]["retailer_name"] + '"  style="width: auto; height: auto; max-width: 150px; max-height: 30px; display: inline">\n';
+                }
+
+                var tbc_center_text = "";
+                var tbc_center_text_2 = "";
+                if(tbc_text != ""){
+                    tbc_center_text = "price-with-tbc";
+                    tbc_center_text_2 = "div-price-with-tbc";
+                }
+
+                if(offers[j]["price"]==''){
+                    offer_price= '<span style="display:none; font-size: '+custom_style["font_price"]+';">' + squirrel_data_local["currency_symbol"] + offers[j]["price"] + '</span>\n';
+                } else {
+                    offer_price= '<span style="font-size: '+custom_style["font_price"]+'; ">' + squirrel_data_local["currency_symbol"] + offers[j]["price"] + '</span>\n';
+                }
+
+                if(typeof custom_style["id"] !="undefined") {
+                    //TITLE
+                    if (typeof custom_style["show_rrp"] != "undefined" && custom_style["show_rrp"] == 0) {
+                        offers[j]["rrp"]='';
+                    }
+                }
+
+                if(offers[j]["rrp"]=='' || offers[j]["rrp"]=='0' || offers[j]["rrp"] <= offers[j]["price"]){
+                    with_rrp = "with_rrp";
+                    if(tbc_text == "") {
+                        offer_rrp = '<div class="squirrel-price-rrp"><span style="font-size: '+custom_style["font_price_rrp"]+';">&nbsp;</span></div>\n';
+                    }
+                } else {
+                    with_rrp = "with_rrp";
+                    var squirrel_rrp_higher = "squirrel-price-rrp-higher";
+                    if(offers[j]["rrp"] <= offers[j]["price"]){
+                        squirrel_rrp_higher = "";
+                    }
+                    if(tbc_text == ""){
+                        offer_rrp = '<div class="squirrel-price-rrp"><span class="' + squirrel_rrp_higher +'" style="font-size: '+custom_style["font_price_rrp"]+';">' + squirrel_data_local["currency_symbol"] + offers[j]["rrp"] + '</span></div>';
+                    }
+
+                }
+                var tbc_price_style = "";
+
+                //consoleLog("TOOLTIP 2: " , offers[j] );
+                //if(offers[j]["offer_id"] != offers[j]["retailer_id"]){
+                    tooltip_text = '   <div class="offer_price info-retailer">'
+                        + '                    <div class="tooltip_squirrel">';
+                    if (offers[j]["tooltip_text"] != '') {
+                        tooltip_text += '                        <img src="' + getSrcOrigin + '/assets/images/info-circle.png" style="width: 24px;">'
+                            + '                        <div class="tooltip_squirreltext">' + offers[j]["tooltip_text"] + '</div>';
+                    }
+
+                    tooltip_text += '                    </div>'
+                        + '                 </div>';
+                /*}else{
+                    tbc_price_style = 'style=" flex: 15%"';
+                }*/
+
+
+                if(offers[j]["promoted_offer"] == "1" && offers.length>1){
+                    offer += '<div class="squirrel-retailers-legend" style="margin-top: 5px;">'+label_featured_offer+'</div>';
+                }
+
+                offer +=  '<div class="retailer" data-api-id="' + offers[j]["api_id"] + '"  data-offer-id="' + offers[j]["offer_id"] + '" >'
+                    + '     <div class="all_info">'
+                    + product_title
+                    + '         <div class="squirrel-logo">'
+                    + '             <a class="logo-clickable" rel="sponsored, nofollow" target="_blank" href="' + href_val + '" data-href="' + offers[j]["href"] + '" data-href-clean="' + offers[j]["href_clean"] + '" data-api-id="' + offers[j]["api_id"] + '" data-offer-id="' + offers[j]["offer_id"] + '">'
+                    +                   offer_image
+                    + '             </a>'
+                    + '         </div>'
+                    + '         <div class="squirrel-price '+ with_rrp +' ' + tbc_center_text_2 +'" '+ tbc_price_style +' >'
+                    +               tooltip_text
+                    +                   offer_rrp
+                    + '             <div class="offer_price '+tbc_center_text+'" >'
+                    +                   offer_price
+                    + '             </div>'
+                    + '         </div>'
+                    + '         <a class="check_price_btn check_price_link" rel="sponsored, nofollow" target="_blank" href="' + href_val + '" data-href="' + offers[j]["href"] + '" data-href-clean="' + offers[j]["href_clean"] + '" data-api-id="' + offers[j]["api_id"] + '" data-offer-id="' + offers[j]["offer_id"] + '" ' +retailer_id_data+ '>'
+                    + '             <button class="check_price_btn font-squirrel-sqrl-white" style="font-size: '+custom_style["font_button"]+';padding: 8px;min-width: 0px !important; '+custom_style["font_family"]+' !important; ">'+label_view_offer+'</button>'
+                    + '         </a>'
+                    + '     </div>'
+                    + '</div>';
+
+                if(offers[j]["promoted_offer"] == "1" && offers.length>1){
+                    offer += '<div class="squirrel-retailers-legend">'+label_offers+'</div>';
+                }
+
+
+
+
+
+
+
+
+                //obj.offers_list = aux_offers;
+                if(short){
+                    break;
+                }
+
+            }
+
+            if(aux_offers.length==0){
+                aux_offers.push('tbc');
+            }
+
+
+
+            return offer;
+        }
+
+        function getHTMLPlaylist(squirrel_data_local, playlist_id, position) {
+            consoleLog(custom_style);
+            var playlist_title_style = '';
+            if(typeof custom_style["id"] !="undefined") {
+                //TITLE
+                if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                    playlist_title_style += 'font-family:'+custom_style["font_family"]+' !important;';
+                }
+                if (typeof custom_style["header_color"] != "undefined" && custom_style["header_color"] != "") {
+                    playlist_title_style += 'background-color:'+custom_style["header_color"]+' !important;';
+                }
+                if (typeof custom_style["header_font_color"] != "undefined" && custom_style["header_font_color"] != "") {
+                    playlist_title_style += 'color:'+custom_style["header_font_color"]+' !important;';
+                }
+
+                playlist_title_style = 'style="'+playlist_title_style+'"';
+            }
+
+            var html = getPlaylistCssStyle();
+
+
+            html +='\n' +
+            '\n' +
+            '<div style="width: 100%; margin: 0px;">\n' +
+            '<div id="squirrel-playlist-unavailable" style="width: 80%; margin: 10px auto; display: none;">\n' +
+            '    <img src="'+getSrcOrigin+'/assets/images/orange-squirrel.png" height="150" width="auto" alt="Squirrel" class="mx-auto d-block" style="width: 150px; height: 150px; margin: 0 auto; display: block;">\n' +
+            '    <span style="display: block; text-align: center; font-family: sans-serif; color: #fe7701; font-size: 28px; text-shadow: 0px 0px 1px #934501;">Widget Unavailable</span>\n' +
+            '</div>\n' +
+            '\n' +
+            '\n' +
+            '<div class="squirrel-inline-playlist-id" id="squirrel-inline-playlist-id_'+position+'" data-ids="'+playlist_id+'" data-playlist-md5="'+playlist_id+'">\n' +
+            '\n' +
+            '    <div class="squirrel-inline-playlist" style="padding: 0; display:block !important;     border: 1px solid rgba(0,0,0,.125); border-radius: 6px;">\n' +
+            '       <div class="squirrel_brand" id="brand_model" '+playlist_title_style+'>\n' +
+            '            <span id="squirrel-inline-playlist-title_'+position+'">Best deals for the products on this page</span>\n' +
+            '            <img src="' + getSrcOrigin + '/assets/images/xs-squirrel.png">\n' +
+            '        </div>\n'+
+            '        <div class="squirrel-part">\n' +
+            '            <div class="retailers-container">\n' +
+            '                <div class="wrapper">\n' +
+            '                    <div class="carousel_squirrel" id="carousel_squirrel_'+position+'">\n' +
+            '                        <div class="content_playlist" id="squirrel_cont_'+position+'">\n' +
+            '\n' +
+            //'                            Nothing to show!\n' +
+            //'       <img style="width: 30%; margin-left: 25px;" src="https://squirrels.getsquirrel.co/assets/images/loading_transparent.gif" align="center">\n'+
+            '\n' +
+            get_offers_playlist_html(squirrel_data_local, position)+
+            '                        </div>\n' +
+            '\n' +
+            '\n' +
+            '                    </div>\n' +
+            '                    <button class="prev_squirrel" id="prev_squirrel_'+position+'">\n' +
+            '                        <svg\n' +
+            '                                xmlns="http://www.w3.org/2000/svg"\n' +
+            '                                width="24"\n' +
+            '                                height="24"\n' +
+            '                                viewBox="0 0 24 24"\n' +
+            '                        >\n' +
+            '                            <path fill="none" d="M0 0h24v24H0V0z" />\n' +
+            '                            <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />\n' +
+            '                        </svg>\n' +
+            '                    </button>\n' +
+            '                    <button class="next_squirrel" id="next_squirrel_'+position+'">\n' +
+            '                        <svg\n' +
+            '                                xmlns="http://www.w3.org/2000/svg"\n' +
+            '                                width="24"\n' +
+            '                                height="24"\n' +
+            '                                viewBox="0 0 24 24"\n' +
+            '                        >\n' +
+            '                            <path fill="none" d="M0 0h24v24H0V0z" />\n' +
+            '                            <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />\n' +
+            '                        </svg>\n' +
+            '                    </button>\n' +
+            '                </div>\n';
+
+                        if(show_external_val == "1"){
+                html +='  <div class="squirrel-disclaimer" style="display: inline-block;  width: 100%;">';
+
+                html += '<div class="squirrel-ad" style="float: left; display: block; margin-top: 0px;">\n'
+                    +'      <div class="squirrel-ad-container" style="width: 320px; height: 50px; margin: 0px auto; max-height: 50px; overflow: hidden;">\n'
+                    +'          <div id="squirrel_'+playlist_id+'_'+position+'"></div>\n'
+                    +'      </div>\n'
+                    +'   </div>\n';
+
+                html +='      <p class="disclaimer_p font-squirrel-sqrl-black" id="disclaimer_text_'+position+'" style="padding: 2px 5px; font-size: '+custom_style["disclaimer_font_size"]+'; margin: 5px 0px 0px; font-family: ' + custom_style["font_family_disclaimer"] +'; line-height: 1.3em;"></p>'
+                html+='  </div>';
+
+
+            }
+            
+            html +='            </div>\n' +
+                '        </div>\n' +
+                '\n' +
+                '\n' +
+                '    </div>\n' +
+                '</div>\n' +
+                '\n' +
+                '\n' +
+                '\n' +
+                '\n' +
+                '</div>\n';
+
+            return html;
+
+        }
+
+        function setAfterRenderPlaylist(position){
+
+            var playlist = document.querySelector("#squirrel-inline-playlist-id_"+position)
+
+            // CHANGE LINKS ON MOUSE HOVER
+            // LOGOS
+            var logos_elms = playlist.querySelectorAll('.logo-clickable-playlist');
+            for(var i = 0; i < logos_elms.length; i ++) {
+                logos_elms[i].onmouseover = function() {
+                    changeColor(this, "unset");
+                };
+            }
+
+            //DISCLAIMER
+            var disclaimer_links = playlist.querySelectorAll('#disclaimer_text_'+position+' > a');
+
+            for(var i = 0; i < disclaimer_links.length; i ++) {
+                disclaimer_links[i].onmouseover = function() {
+                    changeColor(this, "#5AAF08");
+                };
+            }
+
+            //TEXT BLACK
+            var text_black = playlist.querySelectorAll('.font-squirrel-sqrl-black');
+            text_black.forEach(function(el) {
+                el.style.setProperty("color", 'black', 'important');
+            });
+
+            //TEXT WHITE
+            var text_white = playlist.querySelectorAll('.font-squirrel-sqrl-white');
+            text_white.forEach(function(el) {
+                el.style.setProperty("color", 'white', 'important');
+            });
+
+            //PRODUCT IMAGE
+            /* var product_image = playlist.querySelectorAll('.squirrel-img');
+
+             product_image.forEach(function(el) {
+                 el.style.setProperty("margin-right", 'unset', 'important');
+                 console.log(el);
+             });*/
+
+            setCustomStylePlaylist(position);
+
+            //CHECK IF WAS SQUIRRELS
+            var squirrels = playlist.querySelectorAll('.retailer');
+            if(squirrels.length==0){
+                playlist.style.setProperty("display", 'none', 'important');
+            }
+
+
+            var check_price_links = playlist.querySelectorAll('.check_price_link');
+            for(var i = 0; i < check_price_links.length; i ++) {
+                check_price_links[i].onmouseover = function() {
+                    changeColor(this, "unset");
+                };
+            }
+
+            /*if (show_external_val == 1) {
+                /*   console.log('ADVERT-'+position);
+                   apntag.anq.push(function () {
+                       console.log('ADVERT-PUSH-'+position);
+                       apntag.showTag(position);
+                   });*/
+
+
+            /*    f = document.createElement('script');
+                //p = d.getElementsByTagName('head')[0];
+
+                f.type = 'text/javascript';
+                f.async = true;
+                f.src = "//cdn.browsiprod.com/master/addrev.js";
+
+                var ext_div = document.getElementById('playlist_ext_'+position);
+                ext_div.insertBefore(f, ext_div.firstChild);
+
+                pushExt(position);
+
+            }*/
+
+
+        }
+
+        function setCustomStylePlaylist(position){
+
+            var playlist = document.querySelector("#squirrel-inline-playlist-id_"+position)
+            if(typeof custom_style["id"] !="undefined") {
+                //TITLE
+                /*playlist.querySelectorAll('.brand').forEach(function (el) {
+                    if(typeof custom_style["font_family"] !="undefined" && custom_style["font_family"] !="") {
+                        el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    }
+                    if(typeof custom_style["header_color"] !="undefined" && custom_style["header_color"] !="") {
+                        el.style.setProperty("background-color", custom_style["header_color"], 'important');
+                    }
+                    if(typeof custom_style["header_font_color"] !="undefined" && custom_style["header_font_color"] !="") {
+                        el.style.setProperty("color", custom_style["header_font_color"], 'important');
+                    }
+                });*/
+                if (typeof custom_style["show_header"] != "undefined" && custom_style["show_header"] == 0) {
+                    playlist.querySelectorAll('.squirrel_brand').forEach(function (el) {
+                        el.style.setProperty("display", 'none', 'important');
+                    });
+                }
+
+                if (typeof custom_style["show_logo"] != "undefined" && custom_style["show_logo"] == 0) {
+                    playlist.querySelectorAll('.squirrel_brand img').forEach(function (el) {
+                        el.style.setProperty("display", 'none');
+                    });
+                }
+
+                //CONTENT
+                playlist.querySelectorAll('.squirrel-inline-playlist').forEach(function (el) {
+                    consoleLog(el);
+                    if (typeof custom_style["content_color"] != "undefined" && custom_style["content_color"] != "") {
+                        el.style.setProperty("background-color", custom_style["content_color"], 'important');
+                    }
+                });
+
+                playlist.querySelectorAll('.squirrel-part').forEach(function (el) {
+                    if (typeof custom_style["content_color"] != "undefined" && custom_style["content_color"] != "") {
+                        el.style.setProperty("background-color", custom_style["content_color"], 'important');
+                    }
+                });
+
+                //SQUIRREL TITLE
+                playlist.querySelectorAll('.squirrel-title').forEach(function (el) {
+                    if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                        el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    }
+
+                    if (typeof custom_style["content_font_color"] != "undefined" && custom_style["content_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                    }
+                });
+
+                playlist.querySelectorAll('.offer_price').forEach(function (el) {
+                    if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                        el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    }
+
+                    if (typeof custom_style["content_font_color"] != "undefined" && custom_style["content_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                    }
+                });
+
+                playlist.querySelectorAll('.offer_price > span').forEach(function (el) {
+                    if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                        el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    }
+
+                    if (typeof custom_style["content_font_color"] != "undefined" && custom_style["content_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                    }
+                });
+
+                //DISCLAIMER
+                playlist.querySelectorAll('.squirrel-disclaimer > p').forEach(function (el) {
+                    if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                        el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    }
+
+                    if (typeof custom_style["content_font_color"] != "undefined" && custom_style["content_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["content_font_color"], 'important');
+                    }
+                });
+
+                // OFFER LINK
+
+                playlist.querySelectorAll('.check_price_link > button').forEach(function (el) {
+                    if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                        el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    }
+
+                    if (typeof custom_style["view_offer_link_font_color"] != "undefined" && custom_style["view_offer_link_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["view_offer_link_font_color"], 'important');
+                    }
+
+                    if (typeof custom_style["view_offer_link_color"] != "undefined" && custom_style["view_offer_link_color"] != "") {
+                        el.style.setProperty("background-color", custom_style["view_offer_link_color"], 'important');
+                        el.onmouseover = function() {
+                            changeColor(this, custom_style["view_offer_link_color"]);
+                        };
+                    } else {
+                        // BUTTON OFFER
+                        //var btn = playlist.querySelectorAll('.cheack_price_btn');
+                        //for(var i = 0; i < logos_elms.length; i ++) {
+                        el.onmouseover = function() {
+                            changeColor(this, "#5AAF08");
+                        };
+                        //}
+                    }
+                });
+
+                //RETAILER TEXT
+                playlist.querySelectorAll('.logo-clickable > span').forEach(function (el) {
+                    if (typeof custom_style["font_family"] != "undefined" && custom_style["font_family"] != "") {
+                        el.style.setProperty("font-family", custom_style["font_family"], 'important');
+                    }
+
+                    if (typeof custom_style["retailer_name_font_color"] != "undefined" && custom_style["retailer_name_font_color"] != "") {
+                        el.style.setProperty("color", custom_style["retailer_name_font_color"], 'important');
+                    }
+                });
+
+
+
+            }
+        }
+
+
+        function sendReport(offersIdsList, squirrelId, offer_id, tds_offer,logo_click, md5,retailerIdClick = null, playlist_md5 = null, asins_md5 = null){
+            if(preview){
+                return false;
+            }
+            consoleLog(offersIdsList);
+
+            var domain      = window.location.origin;
+
+            var ref         = window.location.origin + window.location.pathname;
+            //getReferrer(domain);
+
+            var squirrelPrevilUrl = getSrcOrigin;//
+
+            if(squirrelPrevilUrl.slice(-1) == "/"){
+                squirrelPrevilUrl = squirrelPrevilUrl.substring(0, squirrelPrevilUrl.length - 1);
+            }
+
+//        var request_url = squirrelPrevilUrl + "/playlist/report";
+            var request_url = squirrelPrevilUrl + "/squirrels/" + squirrelId + "/report";
+
+            var data = new FormData();
+
+            if(tds_offer)
+                data.append("tds_offer_id", offer_id);
+            else
+                data.append("offer_id", offer_id);
+
+            if(squirrelId)
+                data.append("squirrel_id", squirrelId);
+
+            data.append("offersIdsList", offersIdsList);
+            data.append("domain", domain);
+            data.append("url", ref);
+            data.append("md5", md5);
+            data.append("playlistMd5", playlist_md5);
+            data.append("asinsMd5", asins_md5);
+            data.append("control", 'squirrelwidget_injectable');
+
+            if (retailerIdClick) {
+                data.append("tbc_offer_id", retailerIdClick);
+            }
+            data.append("offers_list", offersIdsList);
+
+            if( !preview){
+                if(countrySqr.length > 0)
+                {
+                    //squirrel_country = squirrel_country[1]
+                }
+                if(offer_id == null && !tds_offer)
+                {
+                    if(countrySqr.length)
+                    {
+                        sendEventToGA('country_impression', { 'event_category': 'Impression Country',  'event_label': countrySqr, 'value': 1 });
+                    }
+                    sendEventToGA('impression', { 'event_category': 'Impression',  'event_label': squirrelId, 'value': 1 });
+                }
+                else {
+                    /* Click report */
+                    if(logo_click)
+                    {
+                        sendEventToGA('logo_click', { 'event_category': 'Logo Click',  'event_label': offer_id });
+                        sendEventToGA('logo_squirrel_click', {'event_category': 'Logo Squirrel Click',  'event_label': squirrelId, 'value': 1 });
+                    }
+                    else
+                    {
+                        if(tds_offer)
+                        {
+                            sendEventToGA('offer_click', { 'event_category': 'TDS Click',  'event_label': offer_id });
+                            sendEventToGA('squirrel_click', { 'event_category': 'Squirrel TDS Click',  'event_label': squirrelId, 'value': 1 });
+                        }
+                        else {
+                            sendEventToGA('offer_click', { 'event_category': 'Click',  'event_label': offer_id });
+                            sendEventToGA('squirrel_click', { 'event_category': 'Squirrel Click',  'event_label': squirrelId, 'value': 1 });
+                        }
+                    }
+                }
+            }
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                }
+            });
+
+            xhr.open("POST", request_url);
+            xhr.send(data);
+        }
+
+
+        function getCssStyleButton(){
+            var css = '<style>';
+            css+='button.check_price_btn{border-radius:7px;font-family:'+custom_style["font_family"]+';background:#5aaf0b!important;color:#fff!important;font-size:12px!important;} button.check_price_btn{width:100%;padding:9px 4px;min-width:75px;border:none;cursor:pointer}  div.squirrel-inline-div .squirrel-part .retailer .button_only a.check_price_link button.check_price_btn{font-size:20px!important}}' +
+                '@media  only screen and (min-width:266px) and (max-width:500px){div.squirrel-inline-div .squirrel-part .retailer .button_only a.check_price_link button.check_price_btn{font-size:16px!important}.squirrel-logo span{font-size:12px}}';
+            css +='</style>';
+            return css;
+
+        }
+        function getCssStyle(){
+            var  css ='<style>' ;
+            css +='.squirrel_div{ line-height: 0 !important;} .contract-info div,.contract-product{font-weight:700;font-size:'+custom_style["font_contract_product"]+'}.contract-info div,.contract-info div span{height:16px;color:'+custom_style["content_font_color"]+'}.contract-info div,.contract-info span,.contract-pricing span,.contract-product,.squirrel-inline-div-id div.squirrel-tabs-header a{font-size:'+custom_style["font_contract_product"]+'}.contract-info div,.contract-info div span,.contract-info span,.contract-pricing span,.squirrel-price-rrp-higher{color:'+custom_style["content_font_color"]+'}#squirrel-short,.brand-short,.squirrel-inline-div-id div.brand-short,.squirrel_div .button_only,img.contract-provider-logo{display:none}.contract-product{width:90px;white-space:normal;line-height:18px}.contract-info div span,.contract-offers{font-size:'+custom_style["font_contract_offers"]+';line-height:13px}.contract-offers{box-sizing:border-box;padding:1px 10px 0;font-weight:400;height:150px;overflow-y:auto}.contract-offer{display:flex;height:80px;box-shadow:#ddd 0 1px 3px 0;margin-bottom:10px;position:relative;white-space:nowrap;border-radius:2px;padding:10px;background-color:'+custom_style["content_color"]+'!important}div.contract-offer div.contract-details{display:flex;width:calc(100% - 290px)}div.contract-offer div.contract-details .contract-info,div.contract-offer div.contract-details .contract-pricing{width:50%}.contract-details>div,.contract-offer>div{display:inline-block;position:relative}.contract-offer .contract-thumbnail img{height:60px;width:60px;object-fit:contain}.contract-phone-info img{width:75px !important;display:block;margin:6px 0 0 -18px}.contract-phone-info{top:0}.contract-info div{padding-bottom:2px;line-height:16px}.contract-info div span{display:inline-block;background-color:'+custom_style["content_color"]+';border:1px solid #4b4d54;border-radius:2px;padding:1px 2px}.contract-info span.memory{color:#5aaf0a;border:1px solid #5aaf0a;font-weight:400}.contract-info span.gen-speed{background-color:#5bc0de;border:1px solid #5bc0de;font-weight:700;color:#fff}.contract-info span{display:block;line-height:22px;height:22px;font-weight:700}.contract-pricing span{display:block;line-height:24px;height:24px;font-weight:700}.contract-pricing span span{display:inline-block;font-size:'+custom_style["font_contract_pricing"]+';font-weight:500;color:#959595}.contract-pricing span.tco{font-size:'+custom_style["font_contract_pricing_1"]+';line-height:12px;height:12px}div.contract-view-offer{right:3px;position:absolute;padding:0 6px}.contract-view-offer a{display:block}.contract-view-offer img{display:block;height:25px !important;margin-top:6px !important;padding:0 5px !important}.contract-view-offer button{padding:8px 4px;border:0;border-radius:7px;width:100%;cursor:pointer;-webkit-transition:background-color .4s ease-out;-moz-transition:background-color .4s ease-out;-o-transition:background-color .4s ease-out;transition:background-color .4s ease-out;background:#5aaf0b!important;color:'+custom_style["view_offer_link_font_color"]+'!important}.contract-view-offer button:hover{background-color:#326006}.squirrel-inline-div .squirrel-part .retailer .squirrel-price .offer_price,.squirrel-inline-div-id .squirrel-inline-div .contract-offers{width:98%}.squirrel-inline-div-id .squirrel-inline-div.contract-offers-background{background-color:#b3b3b3}.squirrel-inline-div-id .squirrel-inline-div .contract-offers hr{margin-top:0;margin-bottom:0;display:none}.contract-offers,.contract-view-offer button,.squirrel-inline-div .squirrel-part .retailer .squirrel-price.tbc span,.squirrel-inline-div .squirrel-part .retailer .squirrel-title,.squirrel-inline-div-id div.squirrel-tabs-header a{font-family:'+custom_style["font_family"]+'}.squirrel_div>a:hover,div.squirrel-logo>a:hover{background-color:#ddd0!important;text-decoration-color:#ddd0!important}.squirrel-disclaimer,.squirrel-inline-div-id{display:block;margin-bottom:0;margin-top:0}.squirrel-inline-div-id div.squirrel-tabs-header{position:relative;display:table;margin:5px auto}.squirrel-inline-div-id div.squirrel-tabs-header a{padding:0 10px;font-weight:600;color:'+custom_style["content_font_color"]+';cursor:pointer}.squirrel-inline-div-id div.squirrel-tabs-header a.selected{color:'+custom_style["tds_selected_button"]+'}.squirrel-inline-div-id div.squirrel-tabs-header a:first-child{border-right:1px solid rgba(74,77,83,.55)}.squirrel_brand>span{overflow:hidden;width:calc(100% - 35px);display:inline-block;height:30px}#squirrel-contract,#squirrel-sim-free{border:none}.squirrel-price{display:flex}.squirrel-inline-div .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price,.squirrel-price-rrp{display:inline-block;text-align:left;width:40%;padding-left:10px}div#main-squirrel{width:80%;margin:0 auto}.squirrel-price-rrp-higher{text-decoration:line-through}.squirrel-inline-div .squirrel-part .retailer .squirrel-price.with_rrp{flex:22%;margin:auto;width:auto;float:none;display:flex}.squirrel-inline-div-id div.squirrel_brand{margin:0;padding:0;letter-spacing:1px;position:relative;line-height:1.6875em}.squirrel-inline-div-id div.squirrel_brand img{position:absolute;right:0}.squirrel-inline-div-id .squirrel-tabs-header{position:relative;display:flex}.squirrel-inline-div-id .bold-text,.squirrel-inline-div-id p.disclaimer-title{font-weight:700}.squirrel-inline-div-id .squirrel-inline-div{padding:5px}.squirrel-inline-div-id .squirrel-ad{float:left;margin-top:16px;display:inline-block}.squirrel-inline-div-id .squirrel-ad-container{width:320px;height:50px;background:url("' + getSrcOrigin + '/assets/images/squirrel_banner.png");margin:0 auto}.squirrel-inline-div-id .disclaimer{display:inline-block;width:calc(100% - 390px);padding:5px 10px 5px 50px}.squirrel-inline-div-id .disclaimer p{font-size:'+custom_style["disclaimer_font_size"]+';line-height:8px;margin:10px 0;font-family:'+custom_style["font_family"]+'}.squirrel-inline-div-id div.squirrel_brand,.squirrel_div .squirrel_brand{font-family:'+custom_style["font_family"]+';font-size:'+custom_style["font_header"]+'}.squirrel-inline-div-id .disclaimer p:last-child{margin-bottom:0}.squirrel-inline-div .squirrel-part{padding-bottom:10px}.squirrel-inline-div .squirrel-price{margin:10px;text-align:center}.squirrel-inline-div .squirrel-part .retailers-container{display:block;flex:80%;padding:0 5px}.squirrel-inline-div .squirrel-part .retailers-container .retailer:only-child{padding:0}.squirrel-inline-div .squirrel-part .retailers-container.desktop{max-height:140px;overflow-y:auto}.squirrel-inline-div .squirrel-part .retailers-container.mobile-collapsed{max-height:155px;overflow:hidden}.squirrel-inline-div .squirrel-part .retailers-container.mobile-expanded{max-height:inherit}.squirrel-inline-div .squirrel-part .retailer{display:flex;padding:3px 0}.squirrel-inline-div .squirrel-part .retailer .squirrel-logo{flex:15%;margin:auto;width:auto;float:none;text-align:center}.squirrel-inline-div .squirrel-part .retailer .squirrel-logo img{vertical-align:middle;height:35px}.squirrel-inline-div .squirrel-part .retailer .squirrel-logo.amazon img{top:5px;position:relative}.squirrel-inline-div .squirrel-part .retailer .squirrel-price.tbc span{font-size:'+custom_style["font_price"]+'}.squirrel-inline-div .squirrel-part .retailer a.check_price_link{margin:auto;color:'+custom_style["view_offer_link_font_color"]+';font-size:'+custom_style["font_button"]+';cursor:pointer;text-decoration:none;font-family:'+custom_style["font_family"]+';width:23%}.squirrel-inline-div .squirrel-part .retailer a.check_price_link button.check_price_btn{width:100%;padding:9px 4px;min-width:75px;border:none;cursor:pointer}.squirrel-inline-div .squirrel-part .retailer:first-child{padding:0 0 3px}.squirrel-inline-div .squirrel-part .retailer:last-child{padding:3px 0 0}.squirrel-inline-div .squirrel-img{text-align:center;padding:5px;width:120px;height:120px;display:none}.squirrel-inline-div .squirrel-img img,.squirrel-inline-div .squirrel-img object{border:2px solid #d3d3d3;padding:5px;width:100%;max-width:110px!important;max-height:110px}.squirrel-inline-div .squirrel-img img{margin:-16px;top:20px;left:5px;position:relative;object-fit:contain}.squirrel_div .tooltip_squirrel{position:relative;display:inline-block;cursor:pointer}.squirrel_div .tooltip_squirrel .tooltip_squirreltext{visibility:hidden;width:180px;background-color:#f5f5f5;border-radius:8px;padding:6px;position:absolute;z-index:9;top:-5px;left:110%;border:1px solid #999;font-size: 11px; line-height: 12px;}.tooltip_squirrel:hover .tooltip_squirreltext{visibility:visible}.squirrel-inline-div .squirrel-part .retailer .squirrel-price.with_rrp{flex:20%!important; padding-right: 5px;}.squirrel-inline-div .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price.stock{width:40%}.squirrel-inline-div .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price.info-retailer{width:15%}.squirrel-inline-div-id div.squirrel_brand img,.squirrel-inline-div-id div.brand-short img,.squirrel-inline-div-id>div.squirrel_brand>img{height:30px;padding:4px}.squirrel-inline-div .squirrel-part .retailer a.check_price_link button.check_price_btn{border-radius:7px;font-family:'+custom_style["font_family"]+';background:#5aaf0b!important;color:'+custom_style["view_offer_link_font_color"]+'!important;font-size:'+custom_style["font_button"]+'}.offer_promoted{border:1px solid rgba(0,0,0,.16);padding:5px;background-color:#e1f3fe;box-shadow:0 3px 6px rgb(0 0 0 / 20%)}.squirrel-inline-div-id div.squirrel_brand{background:#1e1e31!important;color:'+custom_style["header_font_color"]+'!important}.squirrel-inline-div-id div.brand-short{font-family:'+custom_style["font_family"]+';background:'+custom_style["header_color"]+'!important;color:'+custom_style["header_font_color"]+'!important}.squirrel-inline-div-id .squirrel-inline-div{background-color:'+custom_style["content_color"]+'!important;color:'+custom_style["content_font_color"]+'!important}.squirrel-inline-div .squirrel-part .retailer .squirrel-price .squirrel-price-rrp span{line-height:17px;font-size:'+custom_style["font_price"]+'}.squirrel-inline-div .squirrel-part .retailer .squirrel-price span{font-size:'+custom_style["font_price"]+';font-family:'+custom_style["font_family"]+'; line-height: 17px !important;}.squirrel-inline-div .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price.stock span{font-size:'+custom_style["font_stock"]+'}.squirrel_div .all_info{display:contents}.squirrel_div .squirrel_brand{overflow:hidden;width:100%;display:inline-block;height:30px!important;background:#cf7500!important;color:'+custom_style["header_font_color"]+'!important}.squirrel_div{container:my-squirrel-div-layout/inline-size;line-height:17px; display:contents}.squirrel-retailers-legend{text-align:center;display:flex;flex-direction:row;justify-content:center;align-items:center;margin-bottom:0;font-size:8pt}.squirrel-retailers-legend::after,.squirrel-retailers-legend::before{flex-grow:1;height:1px;content:" ";background-color:#d3d3d3}.squirrel-retailers-legend::before{margin-right:10px}.squirrel-retailers-legend::after{margin-left:10px}.squirrel_div .span{padding-left:0;padding-right:0}.squirrel-inline-div-id div.squirrel_brand>span{padding:0 10px}';
+            css +='</style>';
+
+            return css;
+        }
+
+        function getPlaylistCssStyle(){
+            //var  css ='<style>' ;
+
+            var css = '<style>'+
+        '.squirrel_div .squirrel-inline-playlist-id {display: block; margin-bottom: 0; margin-top: 0;} .squirrel_div .squirrel-inline-playlist-id {background: #fbfbfb;} .squirrel_div .squirrel-inline-playlist-id .squirrel-inline-playlist {background-color: #fbfbfb; padding: 5px;} .squirrel_div .squirrel-inline-playlist-id div.squirrel_brand {margin: 0; background: #1e1e31; color: #fff; padding: 0 10px; font-family: sans-serif; letter-spacing: 1px; position: relative; line-height: 1.6875em; font-size: 18px; overflow: hidden; width: calc(100% - 20px); display: inline-block; height: 30px;} .squirrel_div .squirrel-inline-playlist-id div.squirrel_brand img { height: 22px; width: 22px; padding: 4px; top: 0; position: absolute; right: 0;} .squirrel_div .squirrel-inline-playlist-id div.squirrel_brand span {font-family: sans-serif; color: white;} .squirrel_div div.squirrel-inline-playlist .squirrel-part {width: 100%; padding-bottom: 10px; padding: 0 0 3px 0 !important;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailers-container {display: block; flex: 80%; padding: 5px 5px;} .squirrel_div .squirrel-inline-playlist .squirrel-img {text-align: center; padding: 5px 5px; width: 120px; height: 120px; display: block;} .squirrel_div .squirrel-inline-playlist .squirrel-img img { top: 20px; position: relative; object-fit: contain; border: 2px solid lightgray; padding: 10px; background: #fff; width: 80%; max-width: 100px !important; max-height: 100px; text-align: center;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-logo {flex: 15%; margin: auto; width: auto; float: none; text-align: center;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-logo img {vertical-align: middle; max-height: 30px; max-width: 100%; flex: 15%; margin: auto; width: auto; float: none; text-align: center;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price {display: flex; width: 50%; text-align: left;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-price span {font-size: 19px; font-family: sans-serif; color: black;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer a.check_price_link {margin: auto; color: #fff; font-size: 12px; cursor: pointer; text-decoration: none; font-family: Helvetica, sans-serif; width: 25%;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer a.check_price_link button.cheack_price_btn {width: 100%; background-color: #5aaf0b; padding: 9px 4px; min-width: 75px; color: white; border: none; cursor: pointer; border-radius: 4px;} @media  screen and (max-width: 500px) { .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price.info-retailer{display: none;}} @media  screen and (min-width: 501px) { .squirrel_div div.squirrel-inline-playlist .squirrel-part .retailer .button_only a.check_price_link button.cheack_price_btn{font-size: 20px !important;}} @media  only screen and (min-width: 266px) and (max-width: 500px) {.squirrel_div div.squirrel-inline-playlist .squirrel-part .retailer .button_only a.check_price_link button.cheack_price_btn{font-size: 16px !important;} .squirrel_div .squirrel-logo span {font-size: 12px;}} @media  screen and (max-width: 340px) {.squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price.stock {display: none;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-price.with_rrp {flex: 22% !important;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-logo {flex: 24% !important;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer .squirrel-price.with_rrp div.offer_price {padding-right: 4px;}} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer {display: inline !important; padding: 3px 0; min-width: 207px; max-width: 207px;} .squirrel_div .wrapper {width: 100%; position: relative;} .squirrel_div .carousel_squirrel { overflow: auto; scroll-behavior: smooth; scrollbar-width: none; } .squirrel_div .carousel_squirrel::-webkit-scrollbar {height: 0;} .squirrel_div .prev_squirrel, .squirrel_div .next_squirrel {display: flex; justify-content: center; align-content: center; background: #ffb22b; color: #5aaf0b; border: none; padding: 8px; border-radius: 50%; outline: 0; cursor: pointer; position: absolute;} .squirrel_div .prev_squirrel {top: 50%; left: 0; transform: translate(50%, -50%); display: none;} .squirrel_div .next_squirrel {top: 50%; right: 0; transform: translate(-50%, -50%);} .squirrel_div .content_playlist {display: flex; grid-gap: 16px; grid-auto-flow: column; grid-template-columns: unset; margin: auto; box-sizing: border-box;} .squirrel_div .item {width: 205px; height: 180px;} .squirrel_div .squirrel-title{text-align: center; font-size: 16px; line-height: 18px; font-weight: 600; font-family: Merriweather, Helvetica, Arial, sans-serif; margin-top: 25px; margin-bottom: 4px; position: relative; max-height: 60px; min-height: 60px; overflow: hidden; -webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical;} .squirrel_div .squirrel-title span { font-family: sans-serif;} .squirrel_div div, .squirrel_div div p {font-family: sans-serif !important; color: black !important;} .squirrel_div a {font-family: sans-serif !important; color: #009efb !important; text-decoration: none !important; text-decoration-color: unset !important; text-decoration-thickness: unset !important; text-underline-offset: unset !important; } .squirrel_div .offer-row{padding: 0 10px !important; display: flex;} .squirrel_div element.style {border: 1px solid black; min-height: 350px; margin-bottom: 0px;} .squirrel_div .squirrel-inline-playlist .squirrel-part .retailer { padding: 0 0 3px 0 !important;} .squirrel_div *, .squirrel_div *::before, .squirrel_div *::after {box-sizing: unset; } .squirrel_div{word-wrap: normal;} .squirrel-retailers-legend{text-align:center;display:flex;flex-direction:row;justify-content:center;align-items:center;margin-bottom:0;font-size:7pt} .squirrel-retailers-legend::after, .squirrel-retailers-legend::before{flex-grow:1;height:1px;content:" ";background-color:#d3d3d3} .squirrel-retailers-legend::before{margin-right:10px} .squirrel-retailers-legend::after{margin-left:10px}\n'+
+                '</style>';
+
+            //css +='</style>';
+
+
+            return css;
+        }
+
+
+
+        function include_script(script_path, callback_function){
+            var callback_arg1 = arguments[2];
+            var callback_arg2 = arguments[3];
+            var callback_arg3 = arguments[4];
+            var callback_arg4 = arguments[5];
+            var d = document, e = d.createElement('script'), p = d.getElementsByTagName('head')[0];
+            e.type = 'text/javascript';
+            e.async = true;
+            e.src = script_path;
+            e.onload = function(){callback_function(callback_arg1,callback_arg2, callback_arg3,callback_arg4)};
+            p.insertBefore(e, p.firstChild);
+        }
+
+        function checkDomainValid(check_domain) {
+
+            check_domain = check_domain.replace("https://","");
+            check_domain = check_domain.endsWith('/') ? check_domain.slice(0, -1) : check_domain;
+
+                            if( "https://localhost".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://uat.pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://client.getsquirrel.co".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://www.pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://www-pocket--lint-com.cdn.ampproject.org".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://www-pocket--lint-com.bing-amp.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://admin.localhost".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://admin.pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://admin.uat.pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://client.uat.getsquirrel.co".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://uat-inter.pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://squirrel.localhost:4433/".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://squirrel.localhost:4433".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://squirrels.getsquirrel.co".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://preview.uat.getsquirrel.co/".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://uat-joao.pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://little.getsquirrel.co/best-deal/3".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://www--pocket----lint--com-cdn-ampproject-org.translate.goog".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://qa1.pocket-lint.com/".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://www.pocket-lint.com.hardilpreet/".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://qa1.pocket-lint.com".indexOf(check_domain) >= 0){
+                    return true;
+                }
+                            if( "https://www.pocket-lint.com.hardilpreet".indexOf(check_domain) >= 0){
+                    return true;
+                }
+            
+            return false;
+        }
+
+        function gtagSquirrel(){
+            window.squirrelDL = window.squirrelDL || [];
+            squirrelDL.push(arguments);
+        }
+
+        function sendEventToGA(event_type, data){
+                            gtagSquirrel('event',event_type , data);
+                    }
+
+        function startga(){
+                            if( !preview)
+                {
+                    window.squirrelDL = window.squirrelDL || [];
+                    gtagSquirrel('js', new Date());
+                    gtagSquirrel('config', 'G-KTW8L7EGCM');
+                }
+                    }
+        function getUserCountry(country) {
+
+                            include_script("https://www.googletagmanager.com/gtag/js?id=G-KTW8L7EGCM&l=squirrelDL", startga);
+            
+            if(forceCountryCode){
+                country = forceCountryCode;
+            }
+
+            /* If there is no squirrel, we show TBC. This tbcMap is to force the TBC
+            country we want. Ex: If user is in the US, it will show the US tbc */
+            const tbcMap = JSON.parse('{"us":"us","au":"au","nz":"au","ca":"ca","fr":"fr","de":"de","in":"in","it":"it","nl":"nl","es":"es","se":"se"}');
+            const defaultTbc = "gb";
+            country = country.toLowerCase();
+            if(country){
+                consoleLog("TBC COUNTRIES " + country,tbcMap);
+
+                countrySqr = tbcMap[country];
+                if(typeof countrySqr=='undefined'){
+                    countrySqr = defaultTbc;
+                }
+            } else {
+
+                if (this.responseText in tbcMap) {
+                    countrySqr = tbcMap[this.responseText];
+                } else {
+                    countrySqr = "gb";
+                }
+            }
+        }
+
+        
+        
+        function consoleLog(msg, variable){
+
+            if(preview){
+                console.log(msg,variable);
+            }
+        }
+    })();
+
+var referrer_url = "https://www.pocket-lint.com/"
