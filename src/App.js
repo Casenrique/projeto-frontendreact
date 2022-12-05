@@ -8,7 +8,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage"
 
 function App() {
   
-  const [currentPage, setCurrentPage] = useState("ProdutsPage")
+  const [currentPage, setCurrentPage] = useState("ProductsPage")
   const [ bag, setBag ] = useState([])
 
   const [nameSearch, setNameSearch] = useState("");
@@ -33,6 +33,8 @@ function App() {
       case "BagPage":
         return <BagPage
           bag={bag}
+          increaseSpaceshipToBag={increaseSpaceshipToBag}
+          decreaseSpaceshipToBag={decreaseSpaceshipToBag}
         />
       default:
         return <ErrorPage/>
@@ -46,13 +48,43 @@ function App() {
     const spaceshipSearch = newBag.find(
         (spaceshipInBag) => spaceshipInBag.id === spaceshipToAdd.id
     )
-
-
-
-
+    if (!spaceshipSearch) {
+      const newSpaceship = {...spaceshipToAdd, quantity: 1}
+      newBag.push(newSpaceship)
+    } else {
+      spaceshipSearch.quantity++
+    }
 
     setBag(newBag)
   }
+
+  const increaseSpaceshipToBag = (spaceshipToIncrease) => {
+    
+    const newBag = [...bag]
+    
+    const spaceshipSearch = newBag.find(
+        (spaceshipInBag) => spaceshipInBag.id === spaceshipToIncrease.id
+    )
+
+    spaceshipSearch.quantity++
+    
+    setBag(newBag)
+  }
+
+  const decreaseSpaceshipToBag = (spaceshipToDecrease) => {
+    
+    const newBag = [...bag]
+    
+    const spaceshipSearch = newBag.find(
+        (spaceshipInBag) => spaceshipInBag.id === spaceshipToDecrease.id
+    )
+
+    spaceshipSearch.quantity--
+
+    
+    setBag(newBag)
+  }
+
 
 
   return (

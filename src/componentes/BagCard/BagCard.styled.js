@@ -2,15 +2,13 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   display: flex;
+  flex-direction:row;
   padding: 16px;
-  width: 100%;
-  min-height: 288px;
+  max-height: 288px;
   background-color: #323232;
-  /* background: none; */
   border-radius: 12px;
-  flex-direction:column;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: space-between;
+  align-items: center;
   color: #cccccc;
   border: 1px solid black;
 `
@@ -19,18 +17,15 @@ export const ProductPhoto = styled.img`
     max-width: 274.11px;
     height: 184.57px;
     background: #323232;
-    /* border: 1px solid #a100ec; */
     border-radius: 4px;
     overflow: hidden;
 `
 
-// export const ProductData = styled.div`
-//     display:flex;
-//     justify-content:space-between;
-//     align-items:flex-end;
-//     border: 1px solid #03c68b;
-
-// `
+export const ProductData = styled.div`
+align-self: flex-start;
+display:flex;
+flex-direction:column;
+`
 
 export const ProductName = styled.span`
     display:flex;
@@ -59,19 +54,21 @@ export const ProductMovie = styled.span`
     letter-spacing: 0em;
 `
 
-// export const ProductPurchase = styled.div`
-//     display:flex;
-//     flex-direction:column;
-//     width: 60px;
-//     border: 1px solid #3599f5;
-// `
 
 export const ProductPrice = styled.span`
-    /* font-family: "Poppins"; */
     font-weight: 500;
     font-size: 16.5px;
     line-height: 25px;
     color:#DA00FE;
+    padding-top: 8px;
+    background-color: transparent;
+
+`
+export const ProductQuantity = styled.span`
+    font-weight: 500;
+    font-size: 32.5px;
+    line-height: 25px;
+    color:#A100ED;
     padding-top: 8px;
     background-color: transparent;
 
