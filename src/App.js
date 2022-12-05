@@ -5,15 +5,16 @@ import BagPage from "./pages/BagPage/BagPage";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage"
 
-
 function App() {
   
   const [currentPage, setCurrentPage] = useState("ProductsPage")
-  const [ bag, setBag ] = useState([])
+  const [bag, setBag] = useState([])
 
   const [nameSearch, setNameSearch] = useState("");
   const [order, setOrder] = useState("");
   const [sortingParameter, setSortingParameter] = useState("");
+  const [minPrice, setMinPrice] = useState(-Infinity);
+  const [maxPrice, setMaxPrice] = useState(Infinity);
   
   const goToProductsPage = () => setCurrentPage("ProductsPage")
   const goToBagPage = () => setCurrentPage("BagPage")
@@ -29,6 +30,10 @@ function App() {
           sortingParameter={sortingParameter}
           setSortingParameter={setSortingParameter}
           addToBag={addToBag}
+          minPrice={minPrice}
+          setMinPrice={setMinPrice}
+          maxPrice={maxPrice}
+          setMaxPrice={setMaxPrice}
           />
       case "BagPage":
         return <BagPage

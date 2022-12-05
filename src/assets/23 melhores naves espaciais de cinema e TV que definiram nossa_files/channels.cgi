@@ -1,1 +1,0 @@
-gs_channels=['gl_portuguese','gt_positive','gs_science','gs_science_space','gb_safe','gs_entertain','gt_positive_like','gs_tech','gt_positive_love','gs_entertain_movies','gs_tech_compute_apps_anim','gt_positive_trust','gs_tech_compute_apps','gs_tech_compute','gs_travel_type_adventure','gs_entertain_tv','gs_travel_type','gv_safe'];

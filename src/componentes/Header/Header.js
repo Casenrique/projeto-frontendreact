@@ -1,7 +1,8 @@
-import {HeaderContainer, Input, Button, ShopName, Image } from "./Header.styled"
-import rocketIcon from "../../assets/launchpad.svg"
+import {HeaderContainer, Input, Button, ShopLogo, Image } from "./Header.styled"
+import rocketIcon from "../../assets/rocket-ship.png"
 import homeIcon from "../../assets/home-button.svg"
 import bagIcon from "../../assets/cart.svg"
+import logo from "../../assets/logo.png"
 
 
 
@@ -13,24 +14,22 @@ const Header = (props) => {
         <HeaderContainer>
             <Button>
                 <Image src={rocketIcon} alt="Rocket Icon" />
-            </Button>
-            <ShopName>
+            </Button>            
                 <a href="/">
-                    Spaceships Shop
-                </a>
-            </ShopName>
+                    <ShopLogo src={logo} alt=""/>
+                </a>            
             <Button onClick={goToProductsPage}>
                 <Image src={homeIcon} alt="Home Icon" />
             </Button>
 
-            <Input
-            placeholder="Digite o nome da espaço nave desejada"
+            {/* <Input
+            placeholder="Escolha sua nave"
             value={nameSearch}
             onChange={(e) => setNameSearch(e.target.value)}
-            />
+            /> */}
                  
             <Button onClick={goToBagPage}>
-                <Image src={bagIcon} alt="Bag    Icon" />
+                <Image src={bagIcon} alt="Bag Icon" />
             </Button>
         </HeaderContainer>
      )

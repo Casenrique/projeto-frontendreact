@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components"
+import galaxy from "./assets/background-stars.jpg"
+
+
 export const GlobalStyled = createGlobalStyle`
 * {
   margin: 0;
@@ -13,6 +16,7 @@ export const GlobalStyled = createGlobalStyle`
 
   html {
     font-style: sans-serif;
+    background-image:{galaxy}
   }
 
   #root {

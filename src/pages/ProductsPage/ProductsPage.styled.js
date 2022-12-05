@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
+
 export const SpaceshipsCardContainer = styled.main`
-  /* background-color: #242424; */
+  
   h1 {
       width: 100%;
       margin-top: 32px;
