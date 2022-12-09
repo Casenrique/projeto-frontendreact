@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Disco voador marciano",
+        "movie": "Mars Attack!" ,
+        "price": 15000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image4-sbxbywodpw-jpg.webp?v1"
+    },
+    {
+        "id": 2,
+        "name": "Cubo de Borg",
+        "movie": "Star Trek",
+        "price": 20000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image3-vgj92ols1n-jpg.webp?v1"
+    },
+    {
+        "id": 3,
+        "name": "Max",
+        "movie": "Vôo do Navegador",
+        "price": 10000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image5-0rzpyn2cve-jpg.webp?v1"
+    },
+    {
+        "id": 4,
+        "name": "A Estrela da Morte",
+        "movie":  "Guerra das Estrelas",
+        "price": 25000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image2-thyipngj5r-jpg.webp?v1"
+    },
+    {
+        "id": 5,
+        "name": "O Milano",
+        "movie": "Guardiões da Galáxia 2",
+        "price": 30000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image20-qov4qitlwo-jpg.webp?v1"
+    },
+    {
+        "id": 6,
+        "name": "O Cruzador Espacial",
+        "movie": "Rick e Morty",
+        "price": 40000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image17-3qr1zohykc-png.webp?v1"
+    },
+    {
+        "id": 7,
+        "name": "A TARDIS",
+        "movie": "Dr. Who",
+        "price": 45000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image9-6iteueqyoo-jpg.webp?v1"
+    },
+    {
+        "id": 8,
+        "name": "USS Enterprise",
+        "movie": "Star Trek",
+        "price": 35000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image19-w6auflsboy-jpg.webp?v1"
+    },
+    {
+        "id":   9,
+        "name": "O Ranger",
+        "movie":  "Interstellar",
+        "price": 65000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-tv-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image4-jzrhugubiw-jpg.webp?v1"
+    },
+    {
+        "id": 10,
+        "name": "Dark Aster",
+        "movie": "Guardiões da Galáxia",
+        "price": 50000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image11-qj7vay5jmu-png.webp?v1"
+    },
+    {
+        "id": 11,
+        "name": "Planet Express",
+        "movie": "Futurama",
+        "price": 60000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image14-rkbfni746e-jpg.webp?v1"
+    },
+    {
+        "id": 12,
+        "name": "Apollo 13",
+        "movie": "Apollo 13 - Do Desastre ao Triunfo",
+        "price": 55000000,
+        "imageUrl": "https://cdn.pocket-lint.com/r/s/660x/assets/images/140994-apps-news-feature-19-best-movie-and-tv-spaceships-the-star-craft-that-defined-our-childhood-image13-qysz9wkw1h-jpg.webp?v1"
+    }
+]
