@@ -15,10 +15,14 @@ const SearchBar = (props) => {
         setSortingParameter 
     } = props
 
+    const storeNameSearchData = () => {
+        localStorage.setItem()
+    }
+
     return(
         <SearchBarContainer>
             <Input
-                type="text"
+                type="search"
                 placeholder="Escolha seu cruzador"
                 value={nameSearch}
                 onChange={(e) => setNameSearch(e.target.value)}

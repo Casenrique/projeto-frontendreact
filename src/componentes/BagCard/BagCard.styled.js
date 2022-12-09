@@ -11,6 +11,8 @@ export const CardContainer = styled.div`
   align-items: center;
   color: #cccccc;
   border: 1px solid black;
+  position: relative;
+  margin:16px;
 `
 
 export const ProductPhoto = styled.img`
@@ -24,22 +26,20 @@ export const ProductPhoto = styled.img`
 export const ProductData = styled.div`
 align-self: flex-start;
 display:flex;
+flex-grow: 2;
 flex-direction:column;
+padding: 0px 10px;
 `
 
 export const ProductName = styled.span`
     display:flex;
     color:#FFFFFF;
-    /* width: 214.11px; */
-    /* font-family: "Poppins"; */
-    font-size: 16px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 0em;
-    /* line-height: 22px; */
     padding-top: 8px;
     text-align: center;
     background-color: none;
-    /* margin-bottom: 10px; */
 `
 export const ProductMovie = styled.span`
     display:flex;
@@ -48,7 +48,7 @@ export const ProductMovie = styled.span`
     text-align: center;
     background-color: transparent;   
     font-family: "Inter";
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
@@ -57,7 +57,7 @@ export const ProductMovie = styled.span`
 
 export const ProductPrice = styled.span`
     font-weight: 500;
-    font-size: 16.5px;
+    font-size: 24px;
     line-height: 25px;
     color:#DA00FE;
     padding-top: 8px;
@@ -65,36 +65,46 @@ export const ProductPrice = styled.span`
 
 `
 export const ProductQuantity = styled.span`
-    font-weight: 500;
-    font-size: 32.5px;
+    font-weight: 700;
+    font-size: 16px;
     line-height: 25px;
     color:#A100ED;
-    padding-top: 8px;
     background-color: transparent;
-
-`
-
-export const AddToBagButton = styled.button`
-    align-items:center;
     justify-content:center;
-    width: 83px;
-    height: 24px;
-    padding-top: 8px;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
+    align-items: center;
 
-    :hover {
-        cursor: pointer;
-        filter:brightness(1.1)
-    }
-
-    :active {
-        filter: brightness(0.85)
-    }
-    
 `
 
+export const ButtonsSection = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+
+`
+export const AddSubtractButton = styled.button`
+    background-color: #242424;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 50px;
+    height: 25px;
+    margin: 8px;
+`
+
+export const RemoveButton = styled.button`
+    background-color: #DA00FE;
+;
+    border-radius: 5px;
+    /* background-color: transparent; */
+    width: 100px;
+    height: 25px;
+    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+`
 
 
 

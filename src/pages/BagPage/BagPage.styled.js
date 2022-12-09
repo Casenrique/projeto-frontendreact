@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
 export const SpaceshipsCardContainer = styled.main`
-  /* background-color: #242424; */
-  /* display:grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr; */
-
+  
   display:flex;
   flex-direction: column;
 
@@ -28,17 +24,19 @@ export const ContentContainer = styled.div`
 `
 
 export const CardsContainer = styled.section`
-    /* display: flex; */
-    /* flex-wrap: wrap; */
+    
+    column-gap: 32px;
+    margin: 16px;
+
     flex-grow: 2;
 
     h1 {
-        /* width: 100%; */
+        
         margin-top: 32px;
     } 
 
     hr {
-        /* width: 100%; */
+        
         margin: 16px 0px;
     }
     
@@ -47,8 +45,16 @@ export const CardsContainer = styled.section`
 
 export const BagContainer = styled.section`
 display:flex;
+flex-direction:column;
 flex-grow: 1;
-background-color: white;
+border: 1px solid #cccccc;
+`
 
+export const BagSummaryTitle = styled.span`
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:32px;
 `
 

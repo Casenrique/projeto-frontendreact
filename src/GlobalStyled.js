@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components"
-import galaxy from "./assets/background-stars.jpg"
 
 
 export const GlobalStyled = createGlobalStyle`
@@ -8,19 +7,36 @@ export const GlobalStyled = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand";
-  
-  background: linear-gradient(96.97deg, #000000 2.78%, rgba(34, 34, 34, 0.66) 152.37%);
+
+  /* background: linear-gradient(96.97deg, #000000 2.78%, rgba(34, 34, 34, 0.66) 152.37%);
+  background-color: #242424; */
   color:#cccccc;
-  background-color: #242424;
 
 
   html {
     font-style: sans-serif;
-    background-image:{galaxy}
   }
 
   #root {
     padding: 16px;
+  }
+
+  body {
+    /* background-image: url("./imgs/background-stars.jpg");
+    background-size: contain; */
+    background: linear-gradient(96.97deg, #000000 2.78%, rgba(34, 34, 34, 0.66) 152.37%);
+    background-color: #242424;
+  }
+
+  button {
+    :hover {
+          cursor: pointer;
+          filter:brightness(1.1)
+      }
+      :active {
+          filter: brightness(0.85)
+    
+      }
   }
 
 }

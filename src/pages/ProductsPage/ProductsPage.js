@@ -33,11 +33,11 @@ const ProductsPage = (props) => {
                 maxPrice={maxPrice}
                 setMaxPrice={setMaxPrice}
             />
-                <h1>ProductPage</h1> 
+                <h1>Catálogo de Espaço Naves</h1> 
                 <hr/>   
             <CardsContainer>
                 {spaceships
-                .filter((spaceship) => spaceship.name.toLowerCase().includes(nameSearch.toLowerCase()))
+                .filter((spaceship) => spaceship.name.toLowerCase().includes(nameSearch.toLowerCase()) || spaceship.movie.toLowerCase().includes(nameSearch.toLowerCase()))
                 .filter((spaceship) => spaceship.price >= minPrice || minPrice === "" )
                 .filter((spaceship) => spaceship.price <= maxPrice || maxPrice === "" )
                 .sort((currentSpaceship, nextSpaceship) => {

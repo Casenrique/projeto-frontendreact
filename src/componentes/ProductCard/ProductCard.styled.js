@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  padding: 16px;
-  min-width: 220px;
-  max-width: 300px;
-  min-height: 260px;
-  background-color: #323232;
-  /* background: none; */
-  border-radius: 12px;
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
+  padding: 16px;
+  min-width: 220px;
+  max-width: 300px;
+  min-height: 260px;
+  background-image: url("./imgs/background-stars.jpg");
+  background-size: cover;
+  /* background-color: #323232; */
+  /* background: linear-gradient(96.97deg, #000000 2.78%, rgba(34, 34, 34, 0.66) 152.37%); */
+  border-radius: 12px;
+  transition: all 1.5s;
   color: #cccccc;
   border: 1px solid black;
 `
@@ -20,32 +23,19 @@ export const ProductPhoto = styled.img`
     max-width: 274.11px;
     height: 184.57px;
     background: #323232;
-    /* border: 1px solid #a100ec; */
     border-radius: 4px;
     overflow: hidden;
 `
 
-// export const ProductData = styled.div`
-//     display:flex;
-//     justify-content:space-between;
-//     align-items:flex-end;
-//     border: 1px solid #03c68b;
-
-// `
-
 export const ProductName = styled.span`
     display:flex;
     color:#FFFFFF;
-    /* width: 214.11px; */
-    /* font-family: "Poppins"; */
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0em;
-    /* line-height: 22px; */
     padding-top: 8px;
     text-align: center;
     background-color: none;
-    /* margin-bottom: 10px; */
 `
 export const ProductMovie = styled.span`
     display:flex;
@@ -59,13 +49,6 @@ export const ProductMovie = styled.span`
     line-height: 19px;
     letter-spacing: 0em;
 `
-
-// export const ProductPurchase = styled.div`
-//     display:flex;
-//     flex-direction:column;
-//     width: 60px;
-//     border: 1px solid #3599f5;
-// `
 
 export const ProductPrice = styled.span`
     /* font-family: "Poppins"; */
@@ -81,12 +64,13 @@ export const ProductPrice = styled.span`
 export const AddToBagButton = styled.button`
     align-items:center;
     justify-content:center;
-    width: 83px;
-    height: 24px;
+    width: 115px;
+    height: 30px;
     padding-top: 8px;
     background-color: transparent;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 
     :hover {
         cursor: pointer;

@@ -5,7 +5,10 @@ import {
         ProductMovie, 
         ProductPrice, 
         ProductQuantity, 
-        ProductData 
+        ProductData,
+        AddSubtractButton,
+        RemoveButton,
+        ButtonsSection 
     } from "./BagCard.styled"
 
 const priceFormmater = new Intl.NumberFormat('en-US', {
@@ -23,9 +26,9 @@ const BagCard = (props) => {
     const { 
         spaceship, 
         increaseSpaceshipToBag,
-        decreaseSpaceshipToBag
+        decreaseSpaceshipToBag,
+        removeFromBag
     } = props
-    console.log(spaceship)
     
     return(
         <CardContainer>
@@ -34,7 +37,12 @@ const BagCard = (props) => {
                 <ProductName>{spaceship.name}</ProductName>
                 <ProductMovie>{spaceship.movie}</ProductMovie>
                 <ProductPrice>{priceFormmater.format(spaceship.price)}</ProductPrice>
-                <ProductQuantity>Qtd: {spaceship.quantity}</ProductQuantity>
+                <ButtonsSection>
+                    {spaceship.quantity > 1 && <AddSubtractButton onClick={() => decreaseSpaceshipToBag(spaceship)}>-</AddSubtractButton>}
+                    <ProductQuantity>Quantidade: {spaceship.quantity}</ProductQuantity>
+                    <AddSubtractButton onClick={() => increaseSpaceshipToBag(spaceship)}>+</AddSubtractButton>
+                </ButtonsSection>
+                <RemoveButton onClick={() => removeFromBag(spaceship)}>Remover</RemoveButton>
             </ProductData>  
         </CardContainer>
     )
