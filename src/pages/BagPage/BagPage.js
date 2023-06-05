@@ -1,4 +1,4 @@
-import BagCard from "../../componentes/BagCard/BagCard"
+import BagCard from "../../components/BagCard/BagCard"
 import { priceFormmater } from "../../utils/priceFormatter"
 import {    CardsContainer, 
             SpaceshipsCardContainer, 

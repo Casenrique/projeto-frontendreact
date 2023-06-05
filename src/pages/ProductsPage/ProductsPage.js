@@ -1,6 +1,6 @@
-import SearchBar from "../../componentes/SearchBar/SearckBar"
+import SearchBar from "../../components/SearchBar/SearckBar"
 import spaceships from "../../spaceships/spaceships.json"
-import ProductCard from "../../componentes/ProductCard/ProductCard"
+import ProductCard from "../../components/ProductCard/ProductCard"
 import { SpaceshipsCardContainer, CardsContainer } from "./ProductsPage.styled"
 
 const ProductsPage = (props) => {

@@ -1,6 +1,6 @@
 import { GlobalStyled } from "./GlobalStyled"
 import { useState } from "react"
-import Header from "./componentes/Header/Header"
+import Header from "./components/Header/Header"
 import BagPage from "./pages/BagPage/BagPage"
 import ProductsPage from "./pages/ProductsPage/ProductsPage"
 import ErrorPage from "./pages/ErrorPage/ErrorPage"
