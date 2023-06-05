@@ -56,6 +56,7 @@ function App() {
     if (!spaceshipSearch) {
       const newSpaceship = {...spaceshipToAdd, quantity: 1}
       newBag.push(newSpaceship)
+      window.alert("Espaçonave adicionada à sacola!")
     } else {
       spaceshipSearch.quantity++
     }
